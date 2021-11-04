@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/grindstone_a",
+  "textures": {
+    "all": "microcosm:blocks/gs1",
+    "particle": "microcosm:blocks/gs1",
+    "main": "microcosm:blocks/gs1"
+  }
+}

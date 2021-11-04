@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "microcosm:trace_elements"
+  },
+  "addition": {
+    "item": "minecraft:iron_nugget"
+  },
+  "result": {
+    "item": "minecraft:iron_ingot"
+  }
+}

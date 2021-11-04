@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "microcosm:block/grove_cut_block"
+    },
+    "facing=east": {
+      "model": "microcosm:block/grove_cut_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "microcosm:block/grove_cut_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "microcosm:block/grove_cut_block",
+      "y": 270
+    }
+  }
+}

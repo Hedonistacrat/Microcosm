@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "microcosm:block/path_x_corner"
+    },
+    "facing=east": {
+      "model": "microcosm:block/path_x_corner",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "microcosm:block/path_x_corner",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "microcosm:block/path_x_corner",
+      "y": 270
+    }
+  }
+}

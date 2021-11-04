@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "microcosm:trace_elements"
+  },
+  "addition": {
+    "item": "minecraft:gold_nugget"
+  },
+  "result": {
+    "item": "minecraft:gold_ingot"
+  }
+}

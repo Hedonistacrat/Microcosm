@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/smelter",
+  "textures": {
+    "all": "microcosm:blocks/smelter",
+    "particle": "microcosm:blocks/smelter",
+    "20": "microcosm:blocks/smelter"
+  }
+}

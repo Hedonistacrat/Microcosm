@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "microcosm:block/bee_hives_block"
+    },
+    "facing=east": {
+      "model": "microcosm:block/bee_hives_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "microcosm:block/bee_hives_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "microcosm:block/bee_hives_block",
+      "y": 270
+    }
+  }
+}

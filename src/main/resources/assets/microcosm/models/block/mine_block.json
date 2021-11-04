@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/mine",
+  "textures": {
+    "all": "microcosm:blocks/mine",
+    "particle": "microcosm:blocks/mine",
+    "10": "microcosm:blocks/mine"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/prospector",
+  "textures": {
+    "all": "microcosm:blocks/prospector",
+    "particle": "microcosm:blocks/prospector",
+    "15": "microcosm:blocks/prospector"
+  }
+}

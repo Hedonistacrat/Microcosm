@@ -1,0 +1,16 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:egg"
+    }
+  ],
+  "result": {
+    "item": "microcosm:micro_villager_essence",
+    "count": 1
+  }
+}

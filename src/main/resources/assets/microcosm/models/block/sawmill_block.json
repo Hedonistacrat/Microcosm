@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/sawmill",
+  "textures": {
+    "all": "microcosm:blocks/sawmill",
+    "particle": "microcosm:blocks/sawmill",
+    "17": "microcosm:blocks/sawmill"
+  }
+}

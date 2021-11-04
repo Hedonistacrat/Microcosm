@@ -1,0 +1,441 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 236,
+    "height": 236,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 29,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Farmhouse: Lvl <BNBT:integer:Level>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Farmhouse: Lvl <BNBT:integer:Level>",
+          "x": 168,
+          "y": 8
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 132,
+          "y": 80
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 150,
+          "y": 80
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 168,
+          "y": 80
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #3",
+          "x": 186,
+          "y": 80
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 4,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #4",
+          "x": 204,
+          "y": 80
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 5,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #5",
+          "x": 222,
+          "y": 80
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 6,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #6",
+          "x": 240,
+          "y": 80
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 7,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #7",
+          "x": 258,
+          "y": 80
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 8,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #8",
+          "x": 276,
+          "y": 80
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 9,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #9",
+          "x": 132,
+          "y": 98
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 10,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #10",
+          "x": 150,
+          "y": 98
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 11,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #11",
+          "x": 168,
+          "y": 98
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 12,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #12",
+          "x": 186,
+          "y": 98
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 13,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #13",
+          "x": 204,
+          "y": 98
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 14,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #14",
+          "x": 222,
+          "y": 98
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 15,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #15",
+          "x": 240,
+          "y": 98
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 16,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #16",
+          "x": 258,
+          "y": 98
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 17,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #17",
+          "x": 276,
+          "y": 98
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "Items.WHEAT_SEEDS"
+          },
+          "id": 18,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #18",
+          "x": 123,
+          "y": 44
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "Items.POTATO"
+          },
+          "id": 19,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #19",
+          "x": 150,
+          "y": 44
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "Items.BEETROOT_SEEDS"
+          },
+          "id": 21,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #21",
+          "x": 204,
+          "y": 44
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "Items.CARROT"
+          },
+          "id": 20,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #20",
+          "x": 177,
+          "y": 44
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "Blocks.REEDS"
+          },
+          "id": 22,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #22",
+          "x": 231,
+          "y": 44
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "Items.MELON_SEEDS"
+          },
+          "id": 23,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #23",
+          "x": 258,
+          "y": 44
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "Items.PUMPKIN_SEEDS"
+          },
+          "id": 24,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #24",
+          "x": 285,
+          "y": 44
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Guide",
+          "onClick": {
+            "name": "FarmHouseGuideBook"
+          },
+          "width": 50,
+          "height": 20,
+          "name": "Guide",
+          "x": 276,
+          "y": 125
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Water: <fluidlevel>",
+          "color": {
+            "value": -16776961,
+            "falpha": 0.0
+          },
+          "name": "Water: <fluidlevel>",
+          "x": 105,
+          "y": 125
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "XP: <BNBT:integer:XP>",
+          "color": {
+            "value": -13382656,
+            "falpha": 0.0
+          },
+          "name": "XP: <BNBT:integer:XP>",
+          "x": 105,
+          "y": 134
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "beetroot_seeds.png",
+          "use1Xscale": false,
+          "name": "beetroot_seeds.png",
+          "x": 204,
+          "y": 26
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "carrot.png",
+          "use1Xscale": false,
+          "name": "carrot.png",
+          "x": 177,
+          "y": 26
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "potato.png",
+          "use1Xscale": false,
+          "name": "potato.png",
+          "x": 150,
+          "y": 26
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wheat_seeds.png",
+          "use1Xscale": false,
+          "name": "wheat_seeds.png",
+          "x": 123,
+          "y": 26
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "sugar_cane.png",
+          "use1Xscale": false,
+          "name": "sugar_cane.png",
+          "x": 231,
+          "y": 26
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pumpkin_seeds.png",
+          "use1Xscale": false,
+          "name": "pumpkin_seeds.png",
+          "x": 285,
+          "y": 26
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "melon_seeds.png",
+          "use1Xscale": false,
+          "name": "melon_seeds.png",
+          "x": 258,
+          "y": 26
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

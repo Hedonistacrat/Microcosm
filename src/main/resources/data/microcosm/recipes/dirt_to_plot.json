@@ -1,0 +1,9 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:stonecutting",
+  "count": 8,
+  "ingredient": {
+    "item": "minecraft:dirt"
+  },
+  "result": "microcosm:plot_block"
+}

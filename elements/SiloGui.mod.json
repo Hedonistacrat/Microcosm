@@ -1,0 +1,214 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 340,
+    "height": 193,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 6,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Wheat <BNBT:integer:Wheat>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Wheat <BNBT:integer:Wheat>",
+          "x": 69,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Potatoes: <BNBT:integer:Potato>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Potatoes: <BNBT:integer:Potato>",
+          "x": 69,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Carrots: <BNBT:integer:Carrot>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Carrots: <BNBT:integer:Carrot>",
+          "x": 69,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Beetroots: <BNBT:integer:Beetroot>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Beetroots: <BNBT:integer:Beetroot>",
+          "x": 69,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Sugar Cane: <BNBT:integer:Sugar Cane>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Sugar Cane: <BNBT:integer:Sugar Cane>",
+          "x": 240,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Melons: <BNBT:integer:Melon>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Melons: <BNBT:integer:Melon>",
+          "x": 240,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Pumpkins: <BNBT:integer:Pumpkin>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Pumpkins: <BNBT:integer:Pumpkin>",
+          "x": 240,
+          "y": 71
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 51,
+          "y": 35
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 51,
+          "y": 53
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 51,
+          "y": 71
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #3",
+          "x": 51,
+          "y": 89
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 4,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #4",
+          "x": 222,
+          "y": 35
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 5,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #5",
+          "x": 222,
+          "y": 53
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 6,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #6",
+          "x": 222,
+          "y": 71
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 7,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #7",
+          "x": 222,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Honey:  <BNBT:integer:Honey Bottle>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Honey:  <BNBT:integer:Honey Bottle>",
+          "x": 240,
+          "y": 89
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

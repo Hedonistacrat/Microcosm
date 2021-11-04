@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/path_straight",
+  "textures": {
+    "all": "microcosm:blocks/path_straight",
+    "particle": "microcosm:blocks/path_straight",
+    "5": "microcosm:blocks/path_straight"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/foresterhut",
+  "textures": {
+    "all": "microcosm:blocks/foresterhut",
+    "particle": "microcosm:blocks/foresterhut",
+    "14": "microcosm:blocks/foresterhut"
+  }
+}

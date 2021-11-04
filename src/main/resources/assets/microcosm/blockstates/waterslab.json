@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "microcosm:block/waterslab"
+    },
+    "type=top": {
+      "model": "microcosm:block/waterslab_top"
+    },
+    "type=double": {
+      "model": "microcosm:block/waterslab_full"
+    }
+  }
+}

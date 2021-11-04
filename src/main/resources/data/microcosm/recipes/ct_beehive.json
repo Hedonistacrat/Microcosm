@@ -1,0 +1,32 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "tag": "minecraft:small_flowers"
+    },
+    "1": {
+      "item": "minecraft:beehive"
+    },
+    "2": {
+      "tag": "minecraft:small_flowers"
+    },
+    "3": {
+      "item": "microcosm:plot_block"
+    },
+    "4": {
+      "item": "microcosm:plot_block"
+    },
+    "5": {
+      "item": "microcosm:plot_block"
+    }
+  },
+  "result": {
+    "item": "microcosm:bee_hives_block",
+    "count": 1
+  }
+}

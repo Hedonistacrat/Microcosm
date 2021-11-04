@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "main": "gs1"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/harvested_field",
+  "textures": {
+    "all": "microcosm:blocks/harvested_field",
+    "particle": "microcosm:blocks/harvested_field",
+    "8": "microcosm:blocks/harvested_field"
+  }
+}

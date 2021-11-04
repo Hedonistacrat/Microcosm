@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/field",
+  "textures": {
+    "all": "microcosm:blocks/field",
+    "particle": "microcosm:blocks/field",
+    "8": "microcosm:blocks/field"
+  }
+}

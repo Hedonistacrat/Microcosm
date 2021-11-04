@@ -1,0 +1,1452 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "PathNoneBlock",
+      "type": "block",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "path_none_block",
+      "path": "~/Paths"
+    },
+    {
+      "name": "Microcosm",
+      "type": "tab",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "microcosm",
+      "path": "~/tab"
+    },
+    {
+      "name": "PathEndBlock",
+      "type": "block",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "path_end_block",
+      "path": "~/Paths"
+    },
+    {
+      "name": "PathCornerBlock",
+      "type": "block",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "path_corner_block",
+      "path": "~/Paths"
+    },
+    {
+      "name": "PathStraightBlock",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "path_straight_block",
+      "path": "~/Paths"
+    },
+    {
+      "name": "PathTCorner",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "path_t_corner",
+      "path": "~/Paths"
+    },
+    {
+      "name": "PathXCorner",
+      "type": "block",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "path_x_corner",
+      "path": "~/Paths"
+    },
+    {
+      "name": "QuarryGUI",
+      "type": "gui",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quarry_gui",
+      "path": "~/Quarry"
+    },
+    {
+      "name": "QuarryBlock",
+      "type": "block",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quarry_block",
+      "path": "~/Quarry"
+    },
+    {
+      "name": "QuarryBlockUpdateTick",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quarry_block_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SawmillGui",
+      "type": "gui",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sawmill_gui",
+      "path": "~/Sawmill"
+    },
+    {
+      "name": "SawmillBlockUpdateTick",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sawmill_block_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SawmillBlock",
+      "type": "block",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "sawmill_block",
+      "path": "~/Sawmill"
+    },
+    {
+      "name": "KilnGui",
+      "type": "gui",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "kiln_gui",
+      "path": "~/Kiln"
+    },
+    {
+      "name": "KilnBlockUpdateTick",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "kiln_block_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "KilnBlock",
+      "type": "block",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "kiln_block",
+      "path": "~/Kiln"
+    },
+    {
+      "name": "PlotBlock",
+      "type": "block",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "plot_block",
+      "path": "~/Paths"
+    },
+    {
+      "name": "FarmHouseBlock",
+      "type": "block",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "farm_house_block",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "TraceElements",
+      "type": "item",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "trace_elements",
+      "path": "~/ProspectorsHut"
+    },
+    {
+      "name": "TEtoNugget",
+      "type": "recipe",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "t_eto_nugget",
+      "path": "~/ProspectorsHut"
+    },
+    {
+      "name": "TEToGoldNug",
+      "type": "recipe",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "te_to_gold_nug",
+      "path": "~/ProspectorsHut"
+    },
+    {
+      "name": "GrindstoneBlock",
+      "type": "block",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grindstone_block",
+      "path": "~/testerfield"
+    },
+    {
+      "name": "ProspectorsHutBlock",
+      "type": "block",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "prospectors_hut_block",
+      "path": "~/ProspectorsHut"
+    },
+    {
+      "name": "UncutGem",
+      "type": "item",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "uncut_gem",
+      "path": "~/ProspectorsHut"
+    },
+    {
+      "name": "ProspectorsHutGUI",
+      "type": "gui",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "prospectors_hut_gui",
+      "path": "~/ProspectorsHut"
+    },
+    {
+      "name": "ProspectorsHutBlockUpdateTick",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "prospectors_hut_block_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Waterslab",
+      "type": "block",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "waterslab",
+      "path": "~/testerfield"
+    },
+    {
+      "name": "Micropath",
+      "type": "tag",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "micropath",
+      "path": "~/tags"
+    },
+    {
+      "name": "PathUpdateProc",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "path_update_proc",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Paths"
+    },
+    {
+      "name": "PathForceUpdateAdjacentProc",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "path_force_update_adjacent_proc",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Paths"
+    },
+    {
+      "name": "PathPlaceTick",
+      "type": "procedure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "path_place_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Paths"
+    },
+    {
+      "name": "WellBlock",
+      "type": "block",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "well_block",
+      "path": "~/Paths"
+    },
+    {
+      "name": "GroveBlock",
+      "type": "block",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grove_block",
+      "path": "~/Grove"
+    },
+    {
+      "name": "GroveCutBlock",
+      "type": "block",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grove_cut_block",
+      "path": "~/Grove"
+    },
+    {
+      "name": "FarmHouseGUI",
+      "type": "gui",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "farm_house_gui",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "FarmHouseBlockUpdateTick",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "farm_house_block_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HarvestedField",
+      "type": "block",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "harvested_field",
+      "path": "~/Field"
+    },
+    {
+      "name": "MiddenBlock",
+      "type": "block",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "midden_block",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "MiddenPlacedCheckProc",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "midden_placed_check_proc",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "ForestersHut",
+      "type": "block",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "foresters_hut",
+      "path": "~/Sawmill"
+    },
+    {
+      "name": "ForesterGUI",
+      "type": "gui",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forester_gui",
+      "path": "~/Sawmill"
+    },
+    {
+      "name": "ForestersHutUpdateTick",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "foresters_hut_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GemToDiamond",
+      "type": "recipe",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "gem_to_diamond",
+      "path": "~/recipes"
+    },
+    {
+      "name": "DirtToPlot",
+      "type": "recipe",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dirt_to_plot",
+      "path": "~/recipes"
+    },
+    {
+      "name": "ElementToIron",
+      "type": "recipe",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "element_to_iron",
+      "path": "~/recipes"
+    },
+    {
+      "name": "ElementToGold",
+      "type": "recipe",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "element_to_gold",
+      "path": "~/recipes"
+    },
+    {
+      "name": "PlotToFarmhouse",
+      "type": "recipe",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "plot_to_farmhouse",
+      "path": "~/recipes"
+    },
+    {
+      "name": "PlotToWell",
+      "type": "recipe",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "plot_to_well",
+      "path": "~/recipes"
+    },
+    {
+      "name": "GrowingFieldBlock",
+      "type": "block",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "growing_field_block",
+      "path": "~/Field"
+    },
+    {
+      "name": "ReadyField",
+      "type": "block",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ready_field",
+      "path": "~/Field"
+    },
+    {
+      "name": "FarmHouseGuideBook",
+      "type": "procedure",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "farm_house_guide_book",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "WellBlockUpdateTick",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "well_block_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Paths"
+    },
+    {
+      "name": "WaterGui",
+      "type": "gui",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "water_gui",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "ParticleStoneHoe",
+      "type": "particle",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "particle_stone_hoe",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "ParticleWheat",
+      "type": "particle",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "particle_wheat",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "ParticlePotato",
+      "type": "particle",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "particle_potato",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "ParticleCarrot",
+      "type": "particle",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "particle_carrot",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "ParticleBeet",
+      "type": "particle",
+      "sortid": 87,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "particle_beet",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "ParticleSugarCane",
+      "type": "particle",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "particle_sugar_cane",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "ParticleMelon",
+      "type": "particle",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "particle_melon",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "ParticlePumpkin",
+      "type": "particle",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "particle_pumpkin",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "PlotToPath",
+      "type": "recipe",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "plot_to_path",
+      "path": "~/recipes"
+    },
+    {
+      "name": "PathToMidden",
+      "type": "recipe",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "path_to_midden",
+      "path": "~/recipes"
+    },
+    {
+      "name": "MicroVillagerEssence",
+      "type": "item",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "micro_villager_essence",
+      "path": "~/Misc"
+    },
+    {
+      "name": "MicroVillagerEssenceRecipe",
+      "type": "recipe",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "micro_villager_essence_recipe",
+      "path": "~/Misc"
+    },
+    {
+      "name": "Farmer",
+      "type": "item",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "farmer",
+      "path": "~/Misc"
+    },
+    {
+      "name": "FarmerRecipe",
+      "type": "recipe",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "farmer_recipe",
+      "path": "~/Misc"
+    },
+    {
+      "name": "PathToPlot",
+      "type": "recipe",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "path_to_plot",
+      "path": "~/recipes"
+    },
+    {
+      "name": "BeeHivesBlock",
+      "type": "block",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bee_hives_block",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "BarnBlock",
+      "type": "block",
+      "sortid": 101,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "barn_block",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "SiloBlock",
+      "type": "block",
+      "sortid": 102,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silo_block",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "SiloGui",
+      "type": "gui",
+      "sortid": 103,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silo_gui",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "SiloBlockUpdateTick",
+      "type": "procedure",
+      "sortid": 104,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "silo_block_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "CTBeehive",
+      "type": "recipe",
+      "sortid": 105,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_beehive",
+      "path": "~/recipes"
+    },
+    {
+      "name": "CTSilo",
+      "type": "recipe",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_silo",
+      "path": "~/recipes"
+    },
+    {
+      "name": "FarmHouseGuiProc",
+      "type": "procedure",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "farm_house_gui_proc",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "MineBlock",
+      "type": "block",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mine_block",
+      "path": "~/Mine"
+    },
+    {
+      "name": "Quarryman",
+      "type": "item",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quarryman",
+      "path": "~/Misc"
+    },
+    {
+      "name": "QuarrymanRecipe",
+      "type": "recipe",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "quarryman_recipe",
+      "path": "~/Misc"
+    },
+    {
+      "name": "Miner",
+      "type": "item",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "miner",
+      "path": "~/Misc"
+    },
+    {
+      "name": "MinerRecipe",
+      "type": "recipe",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "miner_recipe",
+      "path": "~/Misc"
+    },
+    {
+      "name": "CTQuarry",
+      "type": "recipe",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_quarry",
+      "path": "~/recipes"
+    },
+    {
+      "name": "CTGrindstone",
+      "type": "recipe",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_grindstone",
+      "path": "~/recipes"
+    },
+    {
+      "name": "VillageKeyRightClickOnBlock",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "village_key_right_click_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "VillageKey",
+      "type": "item",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "village_key",
+      "path": "~/Misc"
+    },
+    {
+      "name": "MineshaftGUI",
+      "type": "gui",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mineshaft_gui",
+      "path": "~/Mine"
+    },
+    {
+      "name": "MineshaftUpdateTick",
+      "type": "procedure",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mineshaft_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mine"
+    },
+    {
+      "name": "VillageKeyMakeItemGlow",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "village_key_make_item_glow",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SmelterGUI",
+      "type": "gui",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "smelter_gui",
+      "path": "~/Smelter"
+    },
+    {
+      "name": "Smeltery",
+      "type": "block",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "smeltery",
+      "path": "~/Smelter"
+    },
+    {
+      "name": "VillageKeyRightClickedInAir",
+      "type": "procedure",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "village_key_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SmelteryUpdateTick",
+      "type": "procedure",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "smeltery_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Smelter"
+    },
+    {
+      "name": "ShowSmelterCoOrds",
+      "type": "procedure",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "show_smelter_co_ords",
+      "metadata": {
+        "return_type": "logic",
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Mine"
+    },
+    {
+      "name": "StonePickaxe",
+      "type": "particle",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stone_pickaxe",
+      "path": "~/Mine"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "block.microcosm.path_t_corner": "Path",
+      "item.microcosm.micro_villager_essence": " µVillager Essence",
+      "block.microcosm.ready_field": "Harvestable Field",
+      "block.microcosm.harvested_field": "Plowed Field",
+      "block.microcosm.path_none_block": "Path",
+      "block.microcosm.waterslab": "Waterslab",
+      "block.microcosm.path_x_corner": "Path X",
+      "block.microcosm.sawmill_block": "Sawmill",
+      "item.microcosm.farmer": "µFarmer",
+      "block.microcosm.silo_block": "Silo",
+      "block.microcosm.quarry_block": "Quarry",
+      "block.microcosm.grove_cut_block": "Logged Grove",
+      "block.microcosm.growing_field_block": "Growing Field",
+      "block.microcosm.barn_block": "Barn",
+      "block.microcosm.prospectors_hut_block": "Prospector\u0027s Hut",
+      "block.microcosm.midden_block": "Midden Block",
+      "block.microcosm.path_straight_block": "Path Straight",
+      "block.microcosm.farm_house_block": "Farm House",
+      "block.microcosm.path_corner_block": "Path Corner",
+      "block.microcosm.bee_hives_block": "Bee Hives",
+      "item.microcosm.village_key": "Village Key",
+      "item.microcosm.uncut_gem": "Uncut Gem",
+      "block.microcosm.mine_block": "Mine Shaft",
+      "block.microcosm.foresters_hut": "Foresters Hut",
+      "block.microcosm.grindstone_block": "Grindstone",
+      "item.microcosm.quarryman": "µQuarryman",
+      "block.microcosm.path_end_block": "Path End",
+      "item.microcosm.miner": "µMiner",
+      "block.microcosm.kiln_block": "Kiln",
+      "item.microcosm.trace_elements": "Trace Elements",
+      "block.microcosm.smeltery": "Smeltery",
+      "itemGroup.tabmicrocosm": "Microcosm",
+      "block.microcosm.grove_block": "Grove",
+      "block.microcosm.plot_block": "Empty Plot",
+      "block.microcosm.well_block": "Well"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "testerfield",
+        "children": []
+      },
+      {
+        "name": "Field",
+        "children": []
+      },
+      {
+        "name": "Paths",
+        "children": []
+      },
+      {
+        "name": "tab",
+        "children": []
+      },
+      {
+        "name": "Quarry",
+        "children": []
+      },
+      {
+        "name": "Sawmill",
+        "children": []
+      },
+      {
+        "name": "Kiln",
+        "children": []
+      },
+      {
+        "name": "tags",
+        "children": []
+      },
+      {
+        "name": "farmhouse",
+        "children": []
+      },
+      {
+        "name": "Stonemason",
+        "children": []
+      },
+      {
+        "name": "ProspectorsHut",
+        "children": []
+      },
+      {
+        "name": "Grove",
+        "children": []
+      },
+      {
+        "name": "Smelter",
+        "children": []
+      },
+      {
+        "name": "recipes",
+        "children": []
+      },
+      {
+        "name": "Misc",
+        "children": []
+      },
+      {
+        "name": "Mine",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "microcosm",
+    "modName": "Microcosm",
+    "version": "1.2.1",
+    "author": "Brad, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.microcosm",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100236710
+}

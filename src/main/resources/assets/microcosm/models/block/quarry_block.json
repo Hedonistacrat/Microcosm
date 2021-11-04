@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/quarry",
+  "textures": {
+    "all": "microcosm:blocks/quarry",
+    "particle": "microcosm:blocks/quarry",
+    "8": "microcosm:blocks/quarry"
+  }
+}

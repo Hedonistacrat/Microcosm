@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "11": "barn"
+      },
+      "name": "default"
+    }
+  }
+}

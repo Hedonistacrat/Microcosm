@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "5": "path_corner"
+      },
+      "name": "default"
+    }
+  }
+}

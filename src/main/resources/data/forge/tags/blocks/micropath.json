@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "microcosm:farm_house_block",
+    "microcosm:kiln_block",
+    "microcosm:sawmill_block",
+    "microcosm:quarry_block",
+    "microcosm:prospectors_hut_block",
+    "microcosm:grindstone_block",
+    "microcosm:well_block",
+    "microcosm:bee_hives_block",
+    "microcosm:silo_block",
+    "microcosm:barn_block",
+    "microcosm:mine_block",
+    "microcosm:smeltery"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    " 4 ",
+    "678"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:hopper"
+    },
+    "4": {
+      "item": "minecraft:ender_chest"
+    },
+    "6": {
+      "item": "microcosm:plot_block"
+    },
+    "7": {
+      "item": "microcosm:plot_block"
+    },
+    "8": {
+      "item": "microcosm:plot_block"
+    }
+  },
+  "result": {
+    "item": "microcosm:silo_block",
+    "count": 1
+  }
+}

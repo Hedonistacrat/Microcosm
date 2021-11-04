@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/path_x_corner",
+  "textures": {
+    "all": "microcosm:blocks/path_x_corner",
+    "particle": "microcosm:blocks/path_x_corner",
+    "5": "microcosm:blocks/path_x_corner"
+  }
+}

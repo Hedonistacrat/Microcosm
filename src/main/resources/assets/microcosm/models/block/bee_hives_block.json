@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/beehive",
+  "textures": {
+    "all": "microcosm:blocks/beehive",
+    "particle": "microcosm:blocks/beehive",
+    "16": "microcosm:blocks/beehive"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "microcosm:block/barn_block"
+    },
+    "facing=east": {
+      "model": "microcosm:block/barn_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "microcosm:block/barn_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "microcosm:block/barn_block",
+      "y": 270
+    }
+  }
+}

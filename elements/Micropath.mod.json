@@ -1,0 +1,50 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:FarmHouseBlock"
+      },
+      {
+        "value": "CUSTOM:KilnBlock"
+      },
+      {
+        "value": "CUSTOM:SawmillBlock"
+      },
+      {
+        "value": "CUSTOM:QuarryBlock"
+      },
+      {
+        "value": "CUSTOM:ProspectorsHutBlock"
+      },
+      {
+        "value": "CUSTOM:GrindstoneBlock"
+      },
+      {
+        "value": "CUSTOM:WellBlock"
+      },
+      {
+        "value": "CUSTOM:BeeHivesBlock"
+      },
+      {
+        "value": "CUSTOM:SiloBlock"
+      },
+      {
+        "value": "CUSTOM:BarnBlock"
+      },
+      {
+        "value": "CUSTOM:MineBlock"
+      },
+      {
+        "value": "CUSTOM:Smeltery"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "micropath",
+    "namespace": "forge"
+  }
+}

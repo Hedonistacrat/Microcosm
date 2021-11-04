@@ -1,0 +1,13 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "microcosm:path_none_block"
+    }
+  ],
+  "result": {
+    "item": "microcosm:plot_block",
+    "count": 1
+  }
+}

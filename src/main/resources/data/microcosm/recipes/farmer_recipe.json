@@ -1,0 +1,16 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "microcosm:micro_villager_essence"
+    },
+    {
+      "item": "minecraft:potato"
+    }
+  ],
+  "result": {
+    "item": "microcosm:farmer",
+    "count": 1
+  }
+}

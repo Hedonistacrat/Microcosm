@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/grove_cut",
+  "textures": {
+    "all": "microcosm:blocks/grove",
+    "particle": "microcosm:blocks/grove",
+    "8": "microcosm:blocks/grove"
+  }
+}

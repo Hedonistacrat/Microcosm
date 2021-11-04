@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "microcosm:block/foresters_hut"
+    },
+    "facing=east": {
+      "model": "microcosm:block/foresters_hut",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "microcosm:block/foresters_hut",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "microcosm:block/foresters_hut",
+      "y": 270
+    }
+  }
+}

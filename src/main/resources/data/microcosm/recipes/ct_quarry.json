@@ -1,0 +1,36 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    "678"
+  ],
+  "key": {
+    "1": {
+      "item": "microcosm:quarryman"
+    },
+    "3": {
+      "item": "microcosm:plot_block"
+    },
+    "4": {
+      "item": "minecraft:chain"
+    },
+    "5": {
+      "item": "microcosm:plot_block"
+    },
+    "6": {
+      "item": "microcosm:plot_block"
+    },
+    "7": {
+      "tag": "forge:stone"
+    },
+    "8": {
+      "item": "microcosm:plot_block"
+    }
+  },
+  "result": {
+    "item": "microcosm:quarry_block",
+    "count": 1
+  }
+}

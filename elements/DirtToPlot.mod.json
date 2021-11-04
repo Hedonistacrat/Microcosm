@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Stone cutting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 8,
+    "group": "",
+    "recipeShapeless": false,
+    "stoneCuttingInputStack": {
+      "value": "Blocks.DIRT#0"
+    },
+    "stoneCuttingReturnStack": {
+      "value": "CUSTOM:PlotBlock"
+    },
+    "name": "dirt_to_plot",
+    "namespace": "mod"
+  }
+}

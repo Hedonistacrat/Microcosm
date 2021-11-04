@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "microcosm:block/ready_field"
+    },
+    "facing=east": {
+      "model": "microcosm:block/ready_field",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "microcosm:block/ready_field",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "microcosm:block/ready_field",
+      "y": 270
+    }
+  }
+}

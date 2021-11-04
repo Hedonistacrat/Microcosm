@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "microcosm:block/smeltery"
+    },
+    "facing=east": {
+      "model": "microcosm:block/smeltery",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "microcosm:block/smeltery",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "microcosm:block/smeltery",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "01",
+    " 3"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:lantern"
+    },
+    "1": {
+      "item": "minecraft:stone_pickaxe"
+    },
+    "3": {
+      "item": "microcosm:micro_villager_essence"
+    }
+  },
+  "result": {
+    "item": "microcosm:quarryman",
+    "count": 1
+  }
+}

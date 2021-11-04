@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/path_end",
+  "textures": {
+    "all": "microcosm:blocks/path_end",
+    "particle": "microcosm:blocks/path_end",
+    "5": "microcosm:blocks/path_end"
+  }
+}
