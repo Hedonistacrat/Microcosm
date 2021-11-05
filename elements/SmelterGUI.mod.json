@@ -3,23 +3,23 @@
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 176,
+    "width": 232,
     "height": 222,
     "inventoryOffsetX": 0,
-    "inventoryOffsetY": 0,
+    "inventoryOffsetY": 25,
     "renderBgLayer": true,
     "doesPauseGame": false,
     "components": [
       {
         "type": "label",
         "data": {
-          "text": "Smeltery Level:<BNBT:integer:Level>",
+          "text": "Smeltery Level: <BNBT:integer:Level>",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Smeltery Level:<BNBT:integer:Level>",
-          "x": 132,
+          "name": "Smeltery Level: <BNBT:integer:Level>",
+          "x": 105,
           "y": 17
         }
       },
@@ -32,7 +32,7 @@
             "falpha": 0.0
           },
           "name": "XP: <BNBT:integer:XP>",
-          "x": 132,
+          "x": 105,
           "y": 26
         }
       },
@@ -43,8 +43,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #0",
-          "x": 132,
-          "y": 71
+          "x": 105,
+          "y": 89
         }
       },
       {
@@ -54,8 +54,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #1",
-          "x": 132,
-          "y": 89
+          "x": 105,
+          "y": 107
         }
       },
       {
@@ -67,8 +67,8 @@
             "falpha": 0.0
           },
           "name": "Iron : <BNBT:integer:Iron Ore>",
-          "x": 150,
-          "y": 71
+          "x": 123,
+          "y": 89
         }
       },
       {
@@ -80,8 +80,8 @@
             "falpha": 0.0
           },
           "name": "Gold: <BNBT:integer:Gold Ore>",
-          "x": 150,
-          "y": 89
+          "x": 123,
+          "y": 107
         }
       },
       {
@@ -93,8 +93,8 @@
             "falpha": 0.0
           },
           "name": "Fuel: <BNBT:integer:Fuel>",
-          "x": 132,
-          "y": 53
+          "x": 105,
+          "y": 35
         }
       },
       {
@@ -107,7 +107,21 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #2",
-          "x": 276,
+          "x": 303,
+          "y": 17
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Work Order",
+          "onClick": {
+            "name": "WorkOrder"
+          },
+          "width": 75,
+          "height": 20,
+          "name": "Work Order",
+          "x": 222,
           "y": 17
         }
       }

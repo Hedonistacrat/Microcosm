@@ -113,7 +113,8 @@
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [
       0,
-      1
+      1,
+      2
     ],
     "inventoryInSlotIDs": [
       2

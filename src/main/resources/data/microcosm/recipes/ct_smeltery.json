@@ -2,29 +2,31 @@
   "group": "microcosm",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    " 1 ",
-    " 4 ",
-    "678"
+    "012",
+    "345"
   ],
   "key": {
+    "0": {
+      "item": "microcosm:smelter"
+    },
     "1": {
-      "item": "minecraft:diamond_hoe"
+      "item": "minecraft:cauldron"
+    },
+    "2": {
+      "item": "minecraft:blast_furnace"
+    },
+    "3": {
+      "item": "microcosm:plot_block"
     },
     "4": {
-      "item": "microcosm:farmer"
-    },
-    "6": {
       "item": "microcosm:plot_block"
     },
-    "7": {
-      "item": "microcosm:plot_block"
-    },
-    "8": {
+    "5": {
       "item": "microcosm:plot_block"
     }
   },
   "result": {
-    "item": "microcosm:farm_house_block",
+    "item": "microcosm:smeltery",
     "count": 1
   }
 }

@@ -7,40 +7,40 @@
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": true,
+    "recipeShapeless": false,
     "recipeSlots": [
       {
         "value": ""
       },
       {
-        "value": "Blocks.STONECUTTER"
-      },
-      {
         "value": ""
       },
       {
         "value": ""
       },
       {
-        "value": "CUSTOM:MicroVillagerEssence"
+        "value": "CUSTOM:Smelter"
       },
       {
-        "value": ""
+        "value": "Items.CAULDRON"
       },
       {
-        "value": ""
+        "value": "Blocks.BLAST_FURNACE"
       },
       {
-        "value": ""
+        "value": "CUSTOM:PlotBlock"
       },
       {
-        "value": ""
+        "value": "CUSTOM:PlotBlock"
+      },
+      {
+        "value": "CUSTOM:PlotBlock"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Quarryman"
+      "value": "CUSTOM:Smeltery"
     },
-    "name": "quarryman_recipe",
+    "name": "ct_smeltery",
     "namespace": "mod"
   }
 }

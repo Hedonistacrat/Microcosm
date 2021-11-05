@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "microcosm:items/key"
+    "layer0": "microcosm:items/work_order"
   }
 }

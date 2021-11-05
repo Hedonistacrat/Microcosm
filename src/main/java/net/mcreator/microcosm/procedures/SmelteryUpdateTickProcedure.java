@@ -3,10 +3,12 @@ package net.mcreator.microcosm.procedures;
 import net.minecraftforge.items.IItemHandlerModifiable;
 import net.minecraftforge.items.CapabilityItemHandler;
 
+import net.minecraft.world.server.ServerWorld;
 import net.minecraft.world.World;
 import net.minecraft.world.IWorld;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.particles.ParticleTypes;
 import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.block.BlockState;
@@ -237,6 +239,9 @@ public class SmelteryUpdateTickProcedure {
 					return -1;
 				}
 			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Fuel")) > 0)))) {
+				if (world instanceof ServerWorld) {
+					((ServerWorld) world).spawnParticle(ParticleTypes.SMOKE, (x + 0.25), (y + 0.25), (z + 0.25), (int) 1, 0.12, 0.12, 0.12, 0.12);
+				}
 				if (!world.isRemote()) {
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -347,6 +352,9 @@ public class SmelteryUpdateTickProcedure {
 					return -1;
 				}
 			}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Fuel")) > 0)))) {
+				if (world instanceof ServerWorld) {
+					((ServerWorld) world).spawnParticle(ParticleTypes.SMOKE, (x + 0.25), (y + 0.25), (z + 0.25), (int) 1, 0.12, 0.12, 0.12, 0.12);
+				}
 				if (!world.isRemote()) {
 					BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 					TileEntity _tileEntity = world.getTileEntity(_bp);

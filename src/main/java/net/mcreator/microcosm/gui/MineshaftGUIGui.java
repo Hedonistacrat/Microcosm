@@ -28,6 +28,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.ScreenManager;
 
+import net.mcreator.microcosm.item.WorkOrderBaseItem;
 import net.mcreator.microcosm.MicrocosmModElements;
 import net.mcreator.microcosm.MicrocosmMod;
 
@@ -75,7 +76,7 @@ public class MineshaftGUIGui extends MicrocosmModElements.ModElement {
 			super(containerType, id);
 			this.entity = inv.player;
 			this.world = inv.player.world;
-			this.internal = new ItemStackHandler(28);
+			this.internal = new ItemStackHandler(29);
 			BlockPos pos = null;
 			if (extraData != null) {
 				pos = extraData.readBlockPos();
@@ -113,177 +114,183 @@ public class MineshaftGUIGui extends MicrocosmModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 7, 50) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 11, 32) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 25, 50) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 29, 32) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 43, 50) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 47, 32) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 61, 50) {
+			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 65, 32) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 79, 50) {
+			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 83, 32) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 97, 50) {
+			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 101, 32) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 115, 50) {
+			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 119, 32) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 133, 50) {
+			this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 137, 32) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 151, 50) {
+			this.customSlots.put(8, this.addSlot(new SlotItemHandler(internal, 8, 155, 32) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 7, 68) {
+			this.customSlots.put(9, this.addSlot(new SlotItemHandler(internal, 9, 11, 50) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 25, 68) {
+			this.customSlots.put(10, this.addSlot(new SlotItemHandler(internal, 10, 29, 50) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 43, 68) {
+			this.customSlots.put(11, this.addSlot(new SlotItemHandler(internal, 11, 47, 50) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 61, 68) {
+			this.customSlots.put(12, this.addSlot(new SlotItemHandler(internal, 12, 65, 50) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 79, 68) {
+			this.customSlots.put(13, this.addSlot(new SlotItemHandler(internal, 13, 83, 50) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 97, 68) {
+			this.customSlots.put(14, this.addSlot(new SlotItemHandler(internal, 14, 101, 50) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 115, 68) {
+			this.customSlots.put(15, this.addSlot(new SlotItemHandler(internal, 15, 119, 50) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 133, 68) {
+			this.customSlots.put(16, this.addSlot(new SlotItemHandler(internal, 16, 137, 50) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 151, 68) {
+			this.customSlots.put(17, this.addSlot(new SlotItemHandler(internal, 17, 155, 50) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 7, 86) {
+			this.customSlots.put(18, this.addSlot(new SlotItemHandler(internal, 18, 11, 68) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 25, 86) {
+			this.customSlots.put(19, this.addSlot(new SlotItemHandler(internal, 19, 29, 68) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 43, 86) {
+			this.customSlots.put(20, this.addSlot(new SlotItemHandler(internal, 20, 47, 68) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 61, 86) {
+			this.customSlots.put(21, this.addSlot(new SlotItemHandler(internal, 21, 65, 68) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 79, 86) {
+			this.customSlots.put(22, this.addSlot(new SlotItemHandler(internal, 22, 83, 68) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 97, 86) {
+			this.customSlots.put(23, this.addSlot(new SlotItemHandler(internal, 23, 101, 68) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 115, 86) {
+			this.customSlots.put(24, this.addSlot(new SlotItemHandler(internal, 24, 119, 68) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 133, 86) {
+			this.customSlots.put(25, this.addSlot(new SlotItemHandler(internal, 25, 137, 68) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 151, 86) {
+			this.customSlots.put(26, this.addSlot(new SlotItemHandler(internal, 26, 155, 68) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(27, this.addSlot(new SlotItemHandler(internal, 27, 151, 23) {
+			this.customSlots.put(27, this.addSlot(new SlotItemHandler(internal, 27, 194, 15) {
+			}));
+			this.customSlots.put(28, this.addSlot(new SlotItemHandler(internal, 28, 194, 51) {
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return (WorkOrderBaseItem.block == stack.getItem());
+				}
 			}));
 			int si;
 			int sj;
 			for (si = 0; si < 3; ++si)
 				for (sj = 0; sj < 9; ++sj)
-					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 24 + 84 + si * 18));
+					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 3 + 8 + sj * 18, 6 + 84 + si * 18));
 			for (si = 0; si < 9; ++si)
-				this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 24 + 142));
+				this.addSlot(new Slot(inv, si, 3 + 8 + si * 18, 6 + 142));
 		}
 
 		public Map<Integer, Slot> get() {
@@ -302,18 +309,18 @@ public class MineshaftGUIGui extends MicrocosmModElements.ModElement {
 			if (slot != null && slot.getHasStack()) {
 				ItemStack itemstack1 = slot.getStack();
 				itemstack = itemstack1.copy();
-				if (index < 28) {
-					if (!this.mergeItemStack(itemstack1, 28, this.inventorySlots.size(), true)) {
+				if (index < 29) {
+					if (!this.mergeItemStack(itemstack1, 29, this.inventorySlots.size(), true)) {
 						return ItemStack.EMPTY;
 					}
 					slot.onSlotChange(itemstack1, itemstack);
-				} else if (!this.mergeItemStack(itemstack1, 0, 28, false)) {
-					if (index < 28 + 27) {
-						if (!this.mergeItemStack(itemstack1, 28 + 27, this.inventorySlots.size(), true)) {
+				} else if (!this.mergeItemStack(itemstack1, 0, 29, false)) {
+					if (index < 29 + 27) {
+						if (!this.mergeItemStack(itemstack1, 29 + 27, this.inventorySlots.size(), true)) {
 							return ItemStack.EMPTY;
 						}
 					} else {
-						if (!this.mergeItemStack(itemstack1, 28, 28 + 27, false)) {
+						if (!this.mergeItemStack(itemstack1, 29, 29 + 27, false)) {
 							return ItemStack.EMPTY;
 						}
 					}

@@ -40,7 +40,7 @@ public class StonePickaxeParticle {
 			this.setSize((float) 0.2, (float) 0.2);
 			this.particleScale *= (float) 1;
 			this.maxAge = 40;
-			this.particleGravity = (float) -0.1;
+			this.particleGravity = (float) -0.05;
 			this.canCollide = false;
 			this.motionX = vx * 1;
 			this.motionY = vy * 1;

@@ -7,13 +7,13 @@
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": true,
+    "recipeShapeless": false,
     "recipeSlots": [
       {
         "value": ""
       },
       {
-        "value": "Blocks.STONECUTTER"
+        "value": "CUSTOM:Miner"
       },
       {
         "value": ""
@@ -22,25 +22,25 @@
         "value": ""
       },
       {
-        "value": "CUSTOM:MicroVillagerEssence"
+        "value": "Blocks.RAIL"
       },
       {
         "value": ""
       },
       {
-        "value": ""
+        "value": "CUSTOM:PlotBlock"
       },
       {
-        "value": ""
+        "value": "Items.DIAMOND_PICKAXE"
       },
       {
-        "value": ""
+        "value": "CUSTOM:PlotBlock"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Quarryman"
+      "value": "CUSTOM:MineBlock"
     },
-    "name": "quarryman_recipe",
+    "name": "ct_mine",
     "namespace": "mod"
   }
 }

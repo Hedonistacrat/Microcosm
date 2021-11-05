@@ -9,6 +9,7 @@
   "block.microcosm.sawmill_block": "Sawmill",
   "item.microcosm.farmer": "µFarmer",
   "block.microcosm.silo_block": "Silo",
+  "item.microcosm.work_order_base": "Work Order Base",
   "block.microcosm.quarry_block": "Quarry",
   "block.microcosm.grove_cut_block": "Logged Grove",
   "block.microcosm.growing_field_block": "Growing Field",
@@ -19,7 +20,6 @@
   "block.microcosm.farm_house_block": "Farm House",
   "block.microcosm.path_corner_block": "Path Corner",
   "block.microcosm.bee_hives_block": "Bee Hives",
-  "item.microcosm.village_key": "Village Key",
   "item.microcosm.uncut_gem": "Uncut Gem",
   "block.microcosm.mine_block": "Mine Shaft",
   "block.microcosm.foresters_hut": "Foresters Hut",
@@ -33,5 +33,6 @@
   "itemGroup.tabmicrocosm": "Microcosm",
   "block.microcosm.grove_block": "Grove",
   "block.microcosm.plot_block": "Empty Plot",
-  "block.microcosm.well_block": "Well"
+  "block.microcosm.well_block": "Well",
+  "item.microcosm.smelter": "µSmelter"
 }

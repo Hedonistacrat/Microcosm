@@ -7,13 +7,13 @@
     "cookingTime": 200,
     "recipeRetstackSize": 1,
     "group": "",
-    "recipeShapeless": false,
+    "recipeShapeless": true,
     "recipeSlots": [
       {
         "value": "Blocks.LANTERN"
       },
       {
-        "value": "Items.STONE_PICKAXE"
+        "value": "Items.DIAMOND_PICKAXE"
       },
       {
         "value": ""

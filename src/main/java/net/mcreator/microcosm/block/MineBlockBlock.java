@@ -311,7 +311,7 @@ public class MineBlockBlock extends MicrocosmModElements.ModElement {
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
-		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(28, ItemStack.EMPTY);
+		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(29, ItemStack.EMPTY);
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -464,6 +464,8 @@ public class MineBlockBlock extends MicrocosmModElements.ModElement {
 		@Override
 		public boolean canExtractItem(int index, ItemStack stack, Direction direction) {
 			if (index == 27)
+				return false;
+			if (index == 28)
 				return false;
 			return true;
 		}

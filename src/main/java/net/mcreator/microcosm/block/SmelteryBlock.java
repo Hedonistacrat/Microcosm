@@ -414,6 +414,8 @@ public class SmelteryBlock extends MicrocosmModElements.ModElement {
 				return false;
 			if (index == 1)
 				return false;
+			if (index == 2)
+				return false;
 			return true;
 		}
 

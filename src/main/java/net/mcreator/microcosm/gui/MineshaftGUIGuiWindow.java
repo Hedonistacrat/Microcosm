@@ -14,14 +14,10 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
 import net.minecraft.client.Minecraft;
 
-import net.mcreator.microcosm.procedures.ShowSmelterCoOrdsProcedure;
-
 import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.matrix.MatrixStack;
-
-import com.google.common.collect.ImmutableMap;
 
 @OnlyIn(Dist.CLIENT)
 public class MineshaftGUIGuiWindow extends ContainerScreen<MineshaftGUIGui.GuiContainerMod> {
@@ -36,8 +32,8 @@ public class MineshaftGUIGuiWindow extends ContainerScreen<MineshaftGUIGui.GuiCo
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.xSize = 176;
-		this.ySize = 215;
+		this.xSize = 183;
+		this.ySize = 179;
 	}
 	private static final ResourceLocation texture = new ResourceLocation("microcosm:textures/mineshaft_gui.png");
 	@Override
@@ -56,6 +52,10 @@ public class MineshaftGUIGuiWindow extends ContainerScreen<MineshaftGUIGui.GuiCo
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("microcosm:textures/gui_tab.png"));
+		this.blit(ms, this.guiLeft + 180, this.guiTop + 1, 0, 0, 36, 36, 36, 36);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("microcosm:textures/gui_tab.png"));
+		this.blit(ms, this.guiLeft + 180, this.guiTop + 37, 0, 0, 36, 36, 36, 36);
 		RenderSystem.disableBlend();
 	}
 
@@ -82,7 +82,7 @@ public class MineshaftGUIGuiWindow extends ContainerScreen<MineshaftGUIGui.GuiCo
 					return tileEntity.getTileData().getDouble(tag);
 				return 0;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Level")) + "", 6, 4, -12829636);
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Level")) + "", 10, 4, -12829636);
 		this.font.drawString(ms, "XP: " + ((int) new Object() {
 			public double getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -90,30 +90,9 @@ public class MineshaftGUIGuiWindow extends ContainerScreen<MineshaftGUIGui.GuiCo
 					return tileEntity.getTileData().getDouble(tag);
 				return 0;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "XP")) + "", 6, 13, -12829636);
-		if (ShowSmelterCoOrdsProcedure.executeProcedure(ImmutableMap.of("x", x, "y", y, "z", z, "world", world)))
-			this.font.drawString(ms, "" + ((int) new Object() {
-				public double getValue(BlockPos pos, String tag) {
-					TileEntity tileEntity = world.getTileEntity(pos);
-					if (tileEntity != null)
-						return tileEntity.getTileData().getDouble(tag);
-					return 0;
-				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "SmelteryX")) + "," + ((int) new Object() {
-				public double getValue(BlockPos pos, String tag) {
-					TileEntity tileEntity = world.getTileEntity(pos);
-					if (tileEntity != null)
-						return tileEntity.getTileData().getDouble(tag);
-					return 0;
-				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "SmelteryY")) + "," + ((int) new Object() {
-				public double getValue(BlockPos pos, String tag) {
-					TileEntity tileEntity = world.getTileEntity(pos);
-					if (tileEntity != null)
-						return tileEntity.getTileData().getDouble(tag);
-					return 0;
-				}
-			}.getValue(new BlockPos((int) x, (int) y, (int) z), "SmelteryZ")) + "", 6, 31, -12829636);
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "XP")) + "", 10, 13, -12829636);
+		this.font.drawString(ms, "Focus", 186, 3, -12829636);
+		this.font.drawString(ms, "Smeltery", 172, 40, -12829636);
 	}
 
 	@Override

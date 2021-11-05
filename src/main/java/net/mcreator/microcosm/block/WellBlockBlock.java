@@ -5,9 +5,10 @@ import net.minecraftforge.registries.ObjectHolder;
 import net.minecraftforge.items.wrapper.SidedInvWrapper;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.CapabilityItemHandler;
-import net.minecraftforge.fml.network.NetworkHooks;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fluids.capability.templates.FluidTank;
+import net.minecraftforge.fluids.capability.CapabilityFluidHandler;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.common.util.LazyOptional;
@@ -25,21 +26,17 @@ import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.util.math.shapes.VoxelShapes;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.util.math.shapes.ISelectionContext;
-import net.minecraft.util.math.BlockRayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.Mirror;
-import net.minecraft.util.Hand;
 import net.minecraft.util.Direction;
-import net.minecraft.util.ActionResultType;
 import net.minecraft.tileentity.TileEntityType;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.LockableLootTileEntity;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.DirectionProperty;
 import net.minecraft.network.play.server.SUpdateTileEntityPacket;
-import net.minecraft.network.PacketBuffer;
 import net.minecraft.network.NetworkManager;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.loot.LootContext;
@@ -49,11 +46,12 @@ import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.item.BlockItem;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.inventory.container.Container;
+import net.minecraft.inventory.container.ChestContainer;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.ISidedInventory;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.fluid.FluidState;
-import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.LivingEntity;
@@ -68,7 +66,6 @@ import net.minecraft.block.Block;
 import net.mcreator.microcosm.procedures.WellBlockUpdateTickProcedure;
 import net.mcreator.microcosm.procedures.PathForceUpdateAdjacentProcProcedure;
 import net.mcreator.microcosm.itemgroup.MicrocosmItemGroup;
-import net.mcreator.microcosm.gui.WaterGuiGui;
 import net.mcreator.microcosm.MicrocosmModElements;
 
 import javax.annotation.Nullable;
@@ -79,8 +76,6 @@ import java.util.Map;
 import java.util.List;
 import java.util.HashMap;
 import java.util.Collections;
-
-import io.netty.buffer.Unpooled;
 
 @MicrocosmModElements.ModElement.Tag
 public class WellBlockBlock extends MicrocosmModElements.ModElement {
@@ -247,30 +242,6 @@ public class WellBlockBlock extends MicrocosmModElements.ModElement {
 		}
 
 		@Override
-		public ActionResultType onBlockActivated(BlockState blockstate, World world, BlockPos pos, PlayerEntity entity, Hand hand,
-				BlockRayTraceResult hit) {
-			super.onBlockActivated(blockstate, world, pos, entity, hand, hit);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			if (entity instanceof ServerPlayerEntity) {
-				NetworkHooks.openGui((ServerPlayerEntity) entity, new INamedContainerProvider() {
-					@Override
-					public ITextComponent getDisplayName() {
-						return new StringTextComponent("Well");
-					}
-
-					@Override
-					public Container createMenu(int id, PlayerInventory inventory, PlayerEntity player) {
-						return new WaterGuiGui.GuiContainerMod(id, inventory,
-								new PacketBuffer(Unpooled.buffer()).writeBlockPos(new BlockPos(x, y, z)));
-					}
-				}, new BlockPos(x, y, z));
-			}
-			return ActionResultType.SUCCESS;
-		}
-
-		@Override
 		public INamedContainerProvider getContainer(BlockState state, World worldIn, BlockPos pos) {
 			TileEntity tileEntity = worldIn.getTileEntity(pos);
 			return tileEntity instanceof INamedContainerProvider ? (INamedContainerProvider) tileEntity : null;
@@ -333,6 +304,8 @@ public class WellBlockBlock extends MicrocosmModElements.ModElement {
 				this.stacks = NonNullList.withSize(this.getSizeInventory(), ItemStack.EMPTY);
 			}
 			ItemStackHelper.loadAllItems(compound, this.stacks);
+			if (compound.get("fluidTank") != null)
+				CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY.readNBT(fluidTank, null, compound.get("fluidTank"));
 		}
 
 		@Override
@@ -341,6 +314,7 @@ public class WellBlockBlock extends MicrocosmModElements.ModElement {
 			if (!this.checkLootAndWrite(compound)) {
 				ItemStackHelper.saveAllItems(compound, this.stacks);
 			}
+			compound.put("fluidTank", CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY.writeNBT(fluidTank, null));
 			return compound;
 		}
 
@@ -384,7 +358,7 @@ public class WellBlockBlock extends MicrocosmModElements.ModElement {
 
 		@Override
 		public Container createMenu(int id, PlayerInventory player) {
-			return new WaterGuiGui.GuiContainerMod(id, player, new PacketBuffer(Unpooled.buffer()).writeBlockPos(this.getPos()));
+			return ChestContainer.createGeneric9X3(id, player, this);
 		}
 
 		@Override
@@ -422,10 +396,24 @@ public class WellBlockBlock extends MicrocosmModElements.ModElement {
 			return true;
 		}
 		private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
+		private final FluidTank fluidTank = new FluidTank(8000, fs -> {
+			if (fs.getFluid() == Fluids.WATER)
+				return true;
+			return false;
+		}) {
+			@Override
+			protected void onContentsChanged() {
+				super.onContentsChanged();
+				markDirty();
+				world.notifyBlockUpdate(pos, world.getBlockState(pos), world.getBlockState(pos), 2);
+			}
+		};
 		@Override
 		public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
 			if (!this.removed && facing != null && capability == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY)
 				return handlers[facing.ordinal()].cast();
+			if (!this.removed && capability == CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY)
+				return LazyOptional.of(() -> fluidTank).cast();
 			return super.getCapability(capability, facing);
 		}
 

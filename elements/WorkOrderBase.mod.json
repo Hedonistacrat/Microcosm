@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "key",
+    "texture": "work_order",
     "customModelName": "Normal",
-    "name": "Village Key",
+    "name": "Work Order Base",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:Microcosm"
@@ -25,18 +25,12 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [],
-    "hasGlow": true,
-    "glowCondition": {
-      "name": "VillageKeyMakeItemGlow"
-    },
+    "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedInAir": {
-      "name": "VillageKeyRightClickedInAir"
-    },
-    "onRightClickedOnBlock": {
-      "name": "VillageKeyRightClickOnBlock"
+    "onItemInUseTick": {
+      "name": "WorkOrderBaseItemInHandTick"
     },
     "hasDispenseBehavior": false
   }

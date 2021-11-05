@@ -1102,54 +1102,6 @@
       "path": "~/recipes"
     },
     {
-      "name": "VillageKeyRightClickOnBlock",
-      "type": "procedure",
-      "sortid": 116,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "village_key_right_click_on_block",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Misc"
-    },
-    {
-      "name": "VillageKey",
-      "type": "item",
-      "sortid": 116,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "village_key",
-      "path": "~/Misc"
-    },
-    {
       "name": "MineshaftGUI",
       "type": "gui",
       "sortid": 117,
@@ -1190,24 +1142,6 @@
       "path": "~/Mine"
     },
     {
-      "name": "VillageKeyMakeItemGlow",
-      "type": "procedure",
-      "sortid": 119,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "village_key_make_item_glow",
-      "metadata": {
-        "return_type": "logic",
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      }
-    },
-    {
       "name": "SmelterGUI",
       "type": "gui",
       "sortid": 120,
@@ -1226,27 +1160,6 @@
       "ids": {},
       "registry_name": "smeltery",
       "path": "~/Smelter"
-    },
-    {
-      "name": "VillageKeyRightClickedInAir",
-      "type": "procedure",
-      "sortid": 122,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "village_key_right_clicked_in_air",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      }
     },
     {
       "name": "SmelteryUpdateTick",
@@ -1279,15 +1192,24 @@
       "path": "~/Smelter"
     },
     {
-      "name": "ShowSmelterCoOrds",
-      "type": "procedure",
-      "sortid": 124,
+      "name": "StonePickaxe",
+      "type": "particle",
+      "sortid": 125,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "show_smelter_co_ords",
+      "registry_name": "stone_pickaxe",
+      "path": "~/Mine"
+    },
+    {
+      "name": "WorkOrder",
+      "type": "procedure",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "work_order",
       "metadata": {
-        "return_type": "logic",
         "dependencies": [
           {
             "name": "x",
@@ -1307,17 +1229,96 @@
           }
         ]
       },
-      "path": "~/Mine"
+      "path": "~/Smelter"
     },
     {
-      "name": "StonePickaxe",
-      "type": "particle",
-      "sortid": 125,
+      "name": "WorkOrderBase",
+      "type": "item",
+      "sortid": 129,
       "compiles": true,
       "locked_code": false,
       "ids": {},
-      "registry_name": "stone_pickaxe",
-      "path": "~/Mine"
+      "registry_name": "work_order_base",
+      "path": "~/Misc"
+    },
+    {
+      "name": "WorkOrderBaseItemInHandTick",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "work_order_base_item_in_hand_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CTMine",
+      "type": "recipe",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_mine",
+      "path": "~/recipes"
+    },
+    {
+      "name": "Smelter",
+      "type": "item",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "smelter",
+      "path": "~/Misc"
+    },
+    {
+      "name": "CTSmeltery",
+      "type": "recipe",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_smeltery",
+      "path": "~/recipes"
+    },
+    {
+      "name": "SmelterRecipe",
+      "type": "recipe",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "smelter_recipe",
+      "path": "~/Misc"
+    },
+    {
+      "name": "WellRightClicked",
+      "type": "procedure",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "well_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Paths"
     }
   ],
   "variable_elements": [],
@@ -1334,6 +1335,7 @@
       "block.microcosm.sawmill_block": "Sawmill",
       "item.microcosm.farmer": "µFarmer",
       "block.microcosm.silo_block": "Silo",
+      "item.microcosm.work_order_base": "Work Order Base",
       "block.microcosm.quarry_block": "Quarry",
       "block.microcosm.grove_cut_block": "Logged Grove",
       "block.microcosm.growing_field_block": "Growing Field",
@@ -1344,7 +1346,6 @@
       "block.microcosm.farm_house_block": "Farm House",
       "block.microcosm.path_corner_block": "Path Corner",
       "block.microcosm.bee_hives_block": "Bee Hives",
-      "item.microcosm.village_key": "Village Key",
       "item.microcosm.uncut_gem": "Uncut Gem",
       "block.microcosm.mine_block": "Mine Shaft",
       "block.microcosm.foresters_hut": "Foresters Hut",
@@ -1358,7 +1359,8 @@
       "itemGroup.tabmicrocosm": "Microcosm",
       "block.microcosm.grove_block": "Grove",
       "block.microcosm.plot_block": "Empty Plot",
-      "block.microcosm.well_block": "Well"
+      "block.microcosm.well_block": "Well",
+      "item.microcosm.smelter": "µSmelter"
     }
   },
   "foldersRoot": {

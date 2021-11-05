@@ -105,8 +105,8 @@
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
     "hasInventory": true,
-    "guiBoundTo": "WaterGui",
-    "openGUIOnRightClick": true,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
@@ -118,9 +118,13 @@
     "energyCapacity": 400000,
     "energyMaxReceive": 200,
     "energyMaxExtract": 200,
-    "isFluidTank": false,
-    "fluidCapacity": 1000,
-    "fluidRestrictions": [],
+    "isFluidTank": true,
+    "fluidCapacity": 8000,
+    "fluidRestrictions": [
+      {
+        "value": "WATER"
+      }
+    ],
     "onTickUpdate": {
       "name": "WellBlockUpdateTick"
     },

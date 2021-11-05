@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 1,
-    "width": 176,
-    "height": 215,
+    "width": 183,
+    "height": 179,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -53,7 +53,7 @@
           },
           "name": "Mine Shaft level: <BNBT:integer:Level>",
           "x": 132,
-          "y": 17
+          "y": 35
         }
       },
       {
@@ -321,20 +321,6 @@
         }
       },
       {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
-          "id": 27,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
-          "name": "Slot #27",
-          "x": 276,
-          "y": 35
-        }
-      },
-      {
         "type": "label",
         "data": {
           "text": "XP: <BNBT:integer:XP>",
@@ -344,23 +330,81 @@
           },
           "name": "XP: <BNBT:integer:XP>",
           "x": 132,
-          "y": 26
+          "y": 44
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gui_tab.png",
+          "use1Xscale": true,
+          "name": "gui_tab.png",
+          "x": 302,
+          "y": 32
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gui_tab.png",
+          "use1Xscale": true,
+          "name": "gui_tab.png",
+          "x": 302,
+          "y": 68
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 27,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #27",
+          "x": 315,
+          "y": 45
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:WorkOrderBase"
+          },
+          "id": 28,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #28",
+          "x": 315,
+          "y": 81
         }
       },
       {
         "type": "label",
         "data": {
-          "text": "<BNBT:integer:SmelteryX>,<BNBT:integer:SmelteryY>,<BNBT:integer:SmelteryZ>",
+          "text": "Focus",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "displayCondition": {
-            "name": "ShowSmelterCoOrds"
+          "name": "Focus",
+          "x": 308,
+          "y": 34
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Smeltery",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
           },
-          "name": "<BNBT:integer:SmelteryX>,<BNBT:integer:SmelteryY>,<BNBT:integer:SmelteryZ>",
-          "x": 132,
-          "y": 44
+          "name": "Smeltery",
+          "x": 294,
+          "y": 71
         }
       }
     ],
@@ -369,7 +413,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

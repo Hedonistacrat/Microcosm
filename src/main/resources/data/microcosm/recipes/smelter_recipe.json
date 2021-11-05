@@ -3,14 +3,17 @@
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
     {
-      "item": "minecraft:stonecutter"
+      "item": "minecraft:diamond_shovel"
+    },
+    {
+      "item": "minecraft:flint_and_steel"
     },
     {
       "item": "microcosm:micro_villager_essence"
     }
   ],
   "result": {
-    "item": "microcosm:quarryman",
+    "item": "microcosm:smelter",
     "count": 1
   }
 }

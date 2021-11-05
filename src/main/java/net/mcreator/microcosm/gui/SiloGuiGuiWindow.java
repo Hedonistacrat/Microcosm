@@ -78,7 +78,7 @@ public class SiloGuiGuiWindow extends ContainerScreen<SiloGuiGui.GuiContainerMod
 					return tileEntity.getTileData().getDouble(tag);
 				return 0;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Wheat")) + "", 25, 11, -12829636);
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Wheat")) + "", 25, 20, -12829636);
 		this.font.drawString(ms, "Potatoes: " + ((int) new Object() {
 			public double getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -86,7 +86,7 @@ public class SiloGuiGuiWindow extends ContainerScreen<SiloGuiGui.GuiContainerMod
 					return tileEntity.getTileData().getDouble(tag);
 				return 0;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Potato")) + "", 25, 29, -12829636);
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Potato")) + "", 25, 38, -12829636);
 		this.font.drawString(ms, "Carrots: " + ((int) new Object() {
 			public double getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -94,7 +94,7 @@ public class SiloGuiGuiWindow extends ContainerScreen<SiloGuiGui.GuiContainerMod
 					return tileEntity.getTileData().getDouble(tag);
 				return 0;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Carrot")) + "", 25, 47, -12829636);
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Carrot")) + "", 25, 56, -12829636);
 		this.font.drawString(ms, "Beetroots: " + ((int) new Object() {
 			public double getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -102,7 +102,7 @@ public class SiloGuiGuiWindow extends ContainerScreen<SiloGuiGui.GuiContainerMod
 					return tileEntity.getTileData().getDouble(tag);
 				return 0;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Beetroot")) + "", 25, 65, -12829636);
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Beetroot")) + "", 25, 74, -12829636);
 		this.font.drawString(ms, "Sugar Cane: " + ((int) new Object() {
 			public double getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -110,7 +110,7 @@ public class SiloGuiGuiWindow extends ContainerScreen<SiloGuiGui.GuiContainerMod
 					return tileEntity.getTileData().getDouble(tag);
 				return 0;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Sugar Cane")) + "", 196, 11, -12829636);
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Sugar Cane")) + "", 196, 20, -12829636);
 		this.font.drawString(ms, "Melons: " + ((int) new Object() {
 			public double getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -118,7 +118,7 @@ public class SiloGuiGuiWindow extends ContainerScreen<SiloGuiGui.GuiContainerMod
 					return tileEntity.getTileData().getDouble(tag);
 				return 0;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Melon")) + "", 196, 29, -12829636);
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Melon")) + "", 196, 38, -12829636);
 		this.font.drawString(ms, "Pumpkins: " + ((int) new Object() {
 			public double getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -126,7 +126,7 @@ public class SiloGuiGuiWindow extends ContainerScreen<SiloGuiGui.GuiContainerMod
 					return tileEntity.getTileData().getDouble(tag);
 				return 0;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Pumpkin")) + "", 196, 47, -12829636);
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Pumpkin")) + "", 196, 56, -12829636);
 		this.font.drawString(ms, "Honey:  " + ((int) new Object() {
 			public double getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -134,7 +134,8 @@ public class SiloGuiGuiWindow extends ContainerScreen<SiloGuiGui.GuiContainerMod
 					return tileEntity.getTileData().getDouble(tag);
 				return 0;
 			}
-		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Honey Bottle")) + "", 196, 65, -12829636);
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Honey Bottle")) + "", 196, 74, -12829636);
+		this.font.drawString(ms, "Silo", 158, 4, -12829636);
 	}
 
 	@Override

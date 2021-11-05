@@ -423,20 +423,6 @@ public class FarmHouseBlockBlock extends MicrocosmModElements.ModElement {
 				return false;
 			if (index == 17)
 				return false;
-			if (index == 18)
-				return false;
-			if (index == 19)
-				return false;
-			if (index == 20)
-				return false;
-			if (index == 21)
-				return false;
-			if (index == 22)
-				return false;
-			if (index == 23)
-				return false;
-			if (index == 24)
-				return false;
 			return true;
 		}
 

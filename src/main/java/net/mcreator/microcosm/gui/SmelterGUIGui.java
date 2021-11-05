@@ -28,6 +28,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.client.gui.ScreenManager;
 
+import net.mcreator.microcosm.procedures.WorkOrderProcedure;
 import net.mcreator.microcosm.MicrocosmModElements;
 import net.mcreator.microcosm.MicrocosmMod;
 
@@ -113,27 +114,27 @@ public class SmelterGUIGui extends MicrocosmModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 7, 63) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 8, 81) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 7, 81) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 8, 99) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 151, 9) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 206, 9) {
 			}));
 			int si;
 			int sj;
 			for (si = 0; si < 3; ++si)
 				for (sj = 0; sj < 9; ++sj)
-					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 0 + 8 + sj * 18, 28 + 84 + si * 18));
+					this.addSlot(new Slot(inv, sj + (si + 1) * 9, 28 + 8 + sj * 18, 53 + 84 + si * 18));
 			for (si = 0; si < 9; ++si)
-				this.addSlot(new Slot(inv, si, 0 + 8 + si * 18, 28 + 142));
+				this.addSlot(new Slot(inv, si, 28 + 8 + si * 18, 53 + 142));
 		}
 
 		public Map<Integer, Slot> get() {
@@ -374,6 +375,16 @@ public class SmelterGUIGui extends MicrocosmModElements.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				WorkOrderProcedure.executeProcedure($_dependencies);
+			}
+		}
 	}
 
 	private static void handleSlotAction(PlayerEntity entity, int slotID, int changeType, int meta, int x, int y, int z) {

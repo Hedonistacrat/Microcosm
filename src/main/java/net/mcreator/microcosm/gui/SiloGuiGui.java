@@ -113,49 +113,49 @@ public class SiloGuiGui extends MicrocosmModElements.ModElement {
 					}
 				}
 			}
-			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 8, 12) {
+			this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 8, 21) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 8, 30) {
+			this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 8, 39) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 8, 48) {
+			this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 8, 57) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 8, 66) {
+			this.customSlots.put(3, this.addSlot(new SlotItemHandler(internal, 3, 8, 75) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 179, 12) {
+			this.customSlots.put(4, this.addSlot(new SlotItemHandler(internal, 4, 179, 21) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 179, 30) {
+			this.customSlots.put(5, this.addSlot(new SlotItemHandler(internal, 5, 179, 39) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 179, 48) {
+			this.customSlots.put(6, this.addSlot(new SlotItemHandler(internal, 6, 179, 57) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
 			}));
-			this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 179, 66) {
+			this.customSlots.put(7, this.addSlot(new SlotItemHandler(internal, 7, 179, 75) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;

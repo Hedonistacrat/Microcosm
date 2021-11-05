@@ -272,11 +272,23 @@ public class QuarryBlockUpdateTickProcedure {
 					InvBlock = new ItemStack(Blocks.STONE);
 				}
 			} else if ((invUpdate == 1)) {
-				InvBlock = new ItemStack(Blocks.ANDESITE);
+				if (Grinder) {
+					InvBlock = new ItemStack(Blocks.GRAVEL);
+				} else {
+					InvBlock = new ItemStack(Blocks.ANDESITE);
+				}
 			} else if ((invUpdate == 2)) {
-				InvBlock = new ItemStack(Blocks.DIORITE);
+				if (Grinder) {
+					InvBlock = new ItemStack(Blocks.SAND);
+				} else {
+					InvBlock = new ItemStack(Blocks.DIORITE);
+				}
 			} else {
-				InvBlock = new ItemStack(Blocks.GRANITE);
+				if (Grinder) {
+					InvBlock = new ItemStack(Blocks.RED_SAND);
+				} else {
+					InvBlock = new ItemStack(Blocks.GRANITE);
+				}
 			}
 			if (((new Object() {
 				public int getAmount(IWorld world, BlockPos pos, int sltid) {

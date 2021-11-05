@@ -8,23 +8,23 @@
   ],
   "key": {
     "1": {
-      "item": "minecraft:diamond_hoe"
+      "item": "microcosm:miner"
     },
     "4": {
-      "item": "microcosm:farmer"
+      "item": "minecraft:rail"
     },
     "6": {
       "item": "microcosm:plot_block"
     },
     "7": {
-      "item": "microcosm:plot_block"
+      "item": "minecraft:diamond_pickaxe"
     },
     "8": {
       "item": "microcosm:plot_block"
     }
   },
   "result": {
-    "item": "microcosm:farm_house_block",
+    "item": "microcosm:mine_block",
     "count": 1
   }
 }

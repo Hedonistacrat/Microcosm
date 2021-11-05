@@ -692,13 +692,11 @@ public class FarmHouseBlockUpdateTickProcedure {
 						}
 						if (world instanceof World && !world.isRemote()) {
 							((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-											.getValue(new ResourceLocation("ambient.basalt_deltas.additions")),
+									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.grass.hit")),
 									SoundCategory.NEUTRAL, (float) 0.25, (float) 1);
 						} else {
 							((World) world).playSound(x, y, z,
-									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
-											.getValue(new ResourceLocation("ambient.basalt_deltas.additions")),
+									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.grass.hit")),
 									SoundCategory.NEUTRAL, (float) 0.25, (float) 1, false);
 						}
 						if (world instanceof ServerWorld) {

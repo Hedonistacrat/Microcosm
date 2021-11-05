@@ -10,10 +10,10 @@
     "recipeShapeless": true,
     "recipeSlots": [
       {
-        "value": ""
+        "value": "Items.DIAMOND_SHOVEL"
       },
       {
-        "value": "Blocks.STONECUTTER"
+        "value": "Items.FLINT_AND_STEEL"
       },
       {
         "value": ""
@@ -38,9 +38,9 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Quarryman"
+      "value": "CUSTOM:Smelter"
     },
-    "name": "quarryman_recipe",
+    "name": "smelter_recipe",
     "namespace": "mod"
   }
 }

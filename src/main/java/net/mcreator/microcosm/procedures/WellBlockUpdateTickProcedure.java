@@ -67,5 +67,12 @@ public class WellBlockUpdateTickProcedure {
 				_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null)
 						.ifPresent(capability -> capability.fill(new FluidStack(Fluids.WATER, _amount), IFluidHandler.FluidAction.EXECUTE));
 		}
+		{
+			TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+			int _amount = (int) 1000;
+			if (_ent != null)
+				_ent.getCapability(CapabilityFluidHandler.FLUID_HANDLER_CAPABILITY, null)
+						.ifPresent(capability -> capability.fill(new FluidStack(Fluids.WATER, _amount), IFluidHandler.FluidAction.EXECUTE));
+		}
 	}
 }
