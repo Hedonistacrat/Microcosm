@@ -99,7 +99,7 @@ public class FarmHouseBlockUpdateTickProcedure {
 		double InventoryLoop = 0;
 		double xpPerHarvest = 0;
 		double XPBase = 0;
-		XPBase = (double) 64;
+		XPBase = (double) 100;
 		PlowChance = (double) (10 - (new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
@@ -532,11 +532,13 @@ public class FarmHouseBlockUpdateTickProcedure {
 						}
 						if (world instanceof World && !world.isRemote()) {
 							((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.crop.break")),
+									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+											.getValue(new ResourceLocation("ambient.basalt_deltas.additions")),
 									SoundCategory.NEUTRAL, (float) 0.25, (float) 1);
 						} else {
 							((World) world).playSound(x, y, z,
-									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.crop.break")),
+									(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS
+											.getValue(new ResourceLocation("ambient.basalt_deltas.additions")),
 									SoundCategory.NEUTRAL, (float) 0.25, (float) 1, false);
 						}
 						if (((new Object() {
@@ -587,7 +589,7 @@ public class FarmHouseBlockUpdateTickProcedure {
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "XP")) < (XPBase * 3))) {
+							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "XP")) < (XPBase * 4))) {
 								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -604,7 +606,7 @@ public class FarmHouseBlockUpdateTickProcedure {
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "XP")) < (XPBase * 7))) {
+							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "XP")) < (XPBase * 8))) {
 								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -621,7 +623,7 @@ public class FarmHouseBlockUpdateTickProcedure {
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "XP")) < (XPBase * 15))) {
+							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "XP")) < (XPBase * 16))) {
 								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -638,7 +640,7 @@ public class FarmHouseBlockUpdateTickProcedure {
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "XP")) < (XPBase * 31))) {
+							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "XP")) < (XPBase * 32))) {
 								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -655,7 +657,7 @@ public class FarmHouseBlockUpdateTickProcedure {
 										return tileEntity.getTileData().getDouble(tag);
 									return -1;
 								}
-							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "XP")) >= (XPBase * 31))) {
+							}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "XP")) >= (XPBase * 32))) {
 								if (!world.isRemote()) {
 									BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
 									TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -703,6 +705,31 @@ public class FarmHouseBlockUpdateTickProcedure {
 							((ServerWorld) world).spawnParticle(ParticleStoneHoeParticle.particle, ((x + ScanX) + 0.5), (y + 0.75),
 									((z + ScanZ) + 0.5), (int) 1, 0.25, 0.25, 0.25, 0);
 						}
+						if ((((new Random()).nextInt((int) Math.pow((new Object() {
+							public double getValue(IWorld world, BlockPos pos, String tag) {
+								TileEntity tileEntity = world.getTileEntity(pos);
+								if (tileEntity != null)
+									return tileEntity.getTileData().getDouble(tag);
+								return -1;
+							}
+						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Level")), 2) + 1)) == 0)) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putDouble("XP", ((new Object() {
+										public double getValue(IWorld world, BlockPos pos, String tag) {
+											TileEntity tileEntity = world.getTileEntity(pos);
+											if (tileEntity != null)
+												return tileEntity.getTileData().getDouble(tag);
+											return -1;
+										}
+									}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "XP")) + 1));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+						}
 					} else if ((((world.getBlockState(new BlockPos((int) (x + ScanX), (int) y, (int) (z + ScanZ))))
 							.getBlock() == HarvestedFieldBlock.block) && (((new Random()).nextInt((int) PlantChance + 1)) == 0))) {
 						{
@@ -739,6 +766,31 @@ public class FarmHouseBlockUpdateTickProcedure {
 							((ServerWorld) world).spawnParticle(ParticleStoneHoeParticle.particle, ((x + ScanX) + 0.5), (y + 0.75),
 									((z + ScanZ) + 0.5), (int) 1, 0.25, 0.25, 0.25, 0);
 						}
+						if ((((new Random()).nextInt((int) Math.pow((new Object() {
+							public double getValue(IWorld world, BlockPos pos, String tag) {
+								TileEntity tileEntity = world.getTileEntity(pos);
+								if (tileEntity != null)
+									return tileEntity.getTileData().getDouble(tag);
+								return -1;
+							}
+						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Level")), 2) + 1)) == 0)) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putDouble("XP", ((new Object() {
+										public double getValue(IWorld world, BlockPos pos, String tag) {
+											TileEntity tileEntity = world.getTileEntity(pos);
+											if (tileEntity != null)
+												return tileEntity.getTileData().getDouble(tag);
+											return -1;
+										}
+									}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "XP")) + 1));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+						}
 					} else if ((((world.getBlockState(new BlockPos((int) (x + ScanX), (int) y, (int) (z + ScanZ))))
 							.getBlock() == PlotBlockBlock.block) && (((new Random()).nextInt((int) PlowChance + 1)) == 0))) {
 						{
@@ -768,44 +820,37 @@ public class FarmHouseBlockUpdateTickProcedure {
 							((ServerWorld) world).spawnParticle(ParticleStoneHoeParticle.particle, ((x + ScanX) + 0.5), (y + 0.75),
 									((z + ScanZ) + 0.5), (int) 1, 0.25, 0.25, 0.25, 0);
 						}
+						if ((((new Random()).nextInt((int) Math.pow((new Object() {
+							public double getValue(IWorld world, BlockPos pos, String tag) {
+								TileEntity tileEntity = world.getTileEntity(pos);
+								if (tileEntity != null)
+									return tileEntity.getTileData().getDouble(tag);
+								return -1;
+							}
+						}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Level")), 2) + 1)) == 0)) {
+							if (!world.isRemote()) {
+								BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+								TileEntity _tileEntity = world.getTileEntity(_bp);
+								BlockState _bs = world.getBlockState(_bp);
+								if (_tileEntity != null)
+									_tileEntity.getTileData().putDouble("XP", ((new Object() {
+										public double getValue(IWorld world, BlockPos pos, String tag) {
+											TileEntity tileEntity = world.getTileEntity(pos);
+											if (tileEntity != null)
+												return tileEntity.getTileData().getDouble(tag);
+											return -1;
+										}
+									}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "XP")) + 1));
+								if (world instanceof World)
+									((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+							}
+						}
 					}
 					ScanZ = (double) (ScanZ + 1);
 				}
 				ScanZ = (double) (0 - ScanRadius);
 				ScanX = (double) (ScanX + 1);
 			}
-		}
-		if (!world.isRemote()) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putString("strXP", (new java.text.DecimalFormat("##").format((new Object() {
-					public double getValue(IWorld world, BlockPos pos, String tag) {
-						TileEntity tileEntity = world.getTileEntity(pos);
-						if (tileEntity != null)
-							return tileEntity.getTileData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "XP")))));
-			if (world instanceof World)
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
-		}
-		if (!world.isRemote()) {
-			BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
-			TileEntity _tileEntity = world.getTileEntity(_bp);
-			BlockState _bs = world.getBlockState(_bp);
-			if (_tileEntity != null)
-				_tileEntity.getTileData().putString("strLevel", (new java.text.DecimalFormat("##").format((new Object() {
-					public double getValue(IWorld world, BlockPos pos, String tag) {
-						TileEntity tileEntity = world.getTileEntity(pos);
-						if (tileEntity != null)
-							return tileEntity.getTileData().getDouble(tag);
-						return -1;
-					}
-				}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Level")))));
-			if (world instanceof World)
-				((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
 	}
 }

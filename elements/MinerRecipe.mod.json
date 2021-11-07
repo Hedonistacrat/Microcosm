@@ -38,7 +38,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:Quarryman"
+      "value": "CUSTOM:Miner"
     },
     "name": "miner_recipe",
     "namespace": "mod"
