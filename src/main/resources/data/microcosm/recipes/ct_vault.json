@@ -1,0 +1,42 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:iron_block"
+    },
+    "1": {
+      "item": "minecraft:iron_door"
+    },
+    "2": {
+      "item": "minecraft:iron_block"
+    },
+    "3": {
+      "item": "minecraft:iron_block"
+    },
+    "4": {
+      "item": "minecraft:ender_chest"
+    },
+    "5": {
+      "item": "minecraft:iron_block"
+    },
+    "6": {
+      "item": "microcosm:plot_block"
+    },
+    "7": {
+      "item": "microcosm:plot_block"
+    },
+    "8": {
+      "item": "microcosm:plot_block"
+    }
+  },
+  "result": {
+    "item": "microcosm:vault",
+    "count": 1
+  }
+}

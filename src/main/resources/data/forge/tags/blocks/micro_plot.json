@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "microcosm:plot_block",
+    "microcosm:rocky_plot",
+    "microcosm:leafy_plot"
+  ]
+}

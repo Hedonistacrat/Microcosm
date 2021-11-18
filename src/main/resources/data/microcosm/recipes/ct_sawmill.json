@@ -1,0 +1,26 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345"
+  ],
+  "key": {
+    "1": {
+      "item": "microcosm:lumberjack"
+    },
+    "3": {
+      "item": "microcosm:plot_block"
+    },
+    "4": {
+      "item": "microcosm:plot_block"
+    },
+    "5": {
+      "item": "microcosm:plot_block"
+    }
+  },
+  "result": {
+    "item": "microcosm:sawmill_block",
+    "count": 1
+  }
+}

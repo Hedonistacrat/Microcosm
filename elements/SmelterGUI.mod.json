@@ -107,8 +107,8 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #2",
-          "x": 303,
-          "y": 17
+          "x": 294,
+          "y": 116
         }
       },
       {
@@ -121,8 +121,45 @@
           "width": 75,
           "height": 20,
           "name": "Work Order",
-          "x": 222,
-          "y": 17
+          "x": 213,
+          "y": 116
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gui_tab.png",
+          "use1Xscale": true,
+          "name": "gui_tab.png",
+          "x": 326,
+          "y": 10
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:WorkOrderBase"
+          },
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #3",
+          "x": 339,
+          "y": 23
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Vault",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Vault",
+          "x": 333,
+          "y": 13
         }
       }
     ],
@@ -131,7 +168,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

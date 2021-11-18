@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/plotflint",
+  "textures": {
+    "all": "microcosm:blocks/plotflint",
+    "particle": "microcosm:blocks/plotflint",
+    "6": "microcosm:blocks/plotflint"
+  }
+}

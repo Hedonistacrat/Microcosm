@@ -107,7 +107,7 @@
     "hasInventory": true,
     "guiBoundTo": "SmelterGUI",
     "openGUIOnRightClick": true,
-    "inventorySize": 19,
+    "inventorySize": 4,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,

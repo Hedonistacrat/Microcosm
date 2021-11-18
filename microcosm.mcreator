@@ -249,26 +249,6 @@
       "path": "~/ProspectorsHut"
     },
     {
-      "name": "TEtoNugget",
-      "type": "recipe",
-      "sortid": 30,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "t_eto_nugget",
-      "path": "~/ProspectorsHut"
-    },
-    {
-      "name": "TEToGoldNug",
-      "type": "recipe",
-      "sortid": 32,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "te_to_gold_nug",
-      "path": "~/ProspectorsHut"
-    },
-    {
       "name": "GrindstoneBlock",
       "type": "block",
       "sortid": 34,
@@ -296,16 +276,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "uncut_gem",
-      "path": "~/ProspectorsHut"
-    },
-    {
-      "name": "ProspectorsHutGUI",
-      "type": "gui",
-      "sortid": 37,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "prospectors_hut_gui",
       "path": "~/ProspectorsHut"
     },
     {
@@ -620,16 +590,6 @@
       }
     },
     {
-      "name": "GemToDiamond",
-      "type": "recipe",
-      "sortid": 60,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "gem_to_diamond",
-      "path": "~/recipes"
-    },
-    {
       "name": "DirtToPlot",
       "type": "recipe",
       "sortid": 61,
@@ -637,26 +597,6 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "dirt_to_plot",
-      "path": "~/recipes"
-    },
-    {
-      "name": "ElementToIron",
-      "type": "recipe",
-      "sortid": 62,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "element_to_iron",
-      "path": "~/recipes"
-    },
-    {
-      "name": "ElementToGold",
-      "type": "recipe",
-      "sortid": 63,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "element_to_gold",
       "path": "~/recipes"
     },
     {
@@ -1319,6 +1259,923 @@
         ]
       },
       "path": "~/Paths"
+    },
+    {
+      "name": "MicroPlot",
+      "type": "tag",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "micro_plot",
+      "path": "~/tags"
+    },
+    {
+      "name": "Forester",
+      "type": "item",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forester",
+      "path": "~/Misc"
+    },
+    {
+      "name": "ForesterRecipe",
+      "type": "recipe",
+      "sortid": 138,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "forester_recipe",
+      "path": "~/Misc"
+    },
+    {
+      "name": "ExGuildBlockUpdateTick",
+      "type": "procedure",
+      "sortid": 139,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ex_guild_block_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CTForester",
+      "type": "recipe",
+      "sortid": 140,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_forester",
+      "path": "~/recipes"
+    },
+    {
+      "name": "PlotBlockOnBlockRightClicked",
+      "type": "procedure",
+      "sortid": 141,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "plot_block_on_block_right_clicked",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Paths"
+    },
+    {
+      "name": "GroveCutBlockUpdateTick",
+      "type": "procedure",
+      "sortid": 142,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grove_cut_block_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Grove"
+    },
+    {
+      "name": "CTSawmill",
+      "type": "recipe",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_sawmill",
+      "path": "~/recipes"
+    },
+    {
+      "name": "Lumberjack",
+      "type": "item",
+      "sortid": 144,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lumberjack",
+      "path": "~/Misc"
+    },
+    {
+      "name": "LumberjackRecipe",
+      "type": "recipe",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "lumberjack_recipe",
+      "path": "~/Misc"
+    },
+    {
+      "name": "ExplorersHall",
+      "type": "block",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "explorers_hall",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "SlayersDormitory",
+      "type": "block",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slayers_dormitory",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "HuntersDen",
+      "type": "block",
+      "sortid": 148,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hunters_den",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "SeekersTower",
+      "type": "block",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "seekers_tower",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "ExplorerHallWingDetect",
+      "type": "procedure",
+      "sortid": 151,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "explorer_hall_wing_detect",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "ExplorerHallBroken",
+      "type": "procedure",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "explorer_hall_broken",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "ExplorersHallGUI",
+      "type": "gui",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "explorers_hall_gui",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "OverworldSlayerCommon",
+      "type": "tag",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overworld_slayer_common",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "OverworldSlayerUncommon",
+      "type": "tag",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overworld_slayer_uncommon",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "OverworldSlayerRare",
+      "type": "tag",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overworld_slayer_rare",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "OverworldSlayerLegendary",
+      "type": "tag",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overworld_slayer_legendary",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "SlayersDormitoryUpdateTick",
+      "type": "procedure",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slayers_dormitory_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "Stacksixteen",
+      "type": "tag",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stacksixteen",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "Stackone",
+      "type": "tag",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "stackone",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "SlayersDormGui",
+      "type": "gui",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "slayers_dorm_gui",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "ConduitPortal",
+      "type": "block",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "conduit_portal",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "ConduitPortalGui",
+      "type": "gui",
+      "sortid": 163,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "conduit_portal_gui",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "OceanSlayerCommon",
+      "type": "tag",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ocean_slayer_common",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "OceanSlayerUncommon",
+      "type": "tag",
+      "sortid": 165,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ocean_slayer_uncommon",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "OceanSlayerRare",
+      "type": "tag",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ocean_slayer_rare",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "OceanSlayerLegendary",
+      "type": "tag",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ocean_slayer_legendary",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "DestOrder",
+      "type": "procedure",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "dest_order",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Smelter"
+    },
+    {
+      "name": "NetherSlayerUncommon",
+      "type": "tag",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nether_slayer_uncommon",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "NetherSlayerRare",
+      "type": "tag",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nether_slayer_rare",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "NetherSlayerLegendary",
+      "type": "tag",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nether_slayer_legendary",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "NetherP",
+      "type": "block",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "nether_p",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "NetherportGui",
+      "type": "gui",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "netherport_gui",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "EndP",
+      "type": "block",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "end_p",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "EndPGui",
+      "type": "gui",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "end_p_gui",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "EndSlayerRare",
+      "type": "tag",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "end_slayer_rare",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "EndSlayerCommon",
+      "type": "tag",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "end_slayer_common",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "OverworldHunter",
+      "type": "tag",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overworld_hunter",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "OverworldHunterRare",
+      "type": "tag",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "overworld_hunter_rare",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "Guildmaster",
+      "type": "item",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "guildmaster",
+      "path": "~/Misc"
+    },
+    {
+      "name": "GuildmasterRecipe",
+      "type": "recipe",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "guildmaster_recipe",
+      "path": "~/Misc"
+    },
+    {
+      "name": "Recruit",
+      "type": "item",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recruit",
+      "path": "~/Misc"
+    },
+    {
+      "name": "RecruitRecipe",
+      "type": "recipe",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "recruit_recipe",
+      "path": "~/Misc"
+    },
+    {
+      "name": "CTExplorersHall",
+      "type": "recipe",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_explorers_hall",
+      "path": "~/recipes"
+    },
+    {
+      "name": "CTSlayersDormitory",
+      "type": "recipe",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_slayers_dormitory",
+      "path": "~/recipes"
+    },
+    {
+      "name": "CTHuntersDen",
+      "type": "recipe",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_hunters_den",
+      "path": "~/recipes"
+    },
+    {
+      "name": "CTConduitPortal",
+      "type": "recipe",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_conduit_portal",
+      "path": "~/recipes"
+    },
+    {
+      "name": "CTNetherPortal",
+      "type": "recipe",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_nether_portal",
+      "path": "~/recipes"
+    },
+    {
+      "name": "CTEndPortal",
+      "type": "recipe",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_end_portal",
+      "path": "~/recipes"
+    },
+    {
+      "name": "HuntersDenUpdateTick",
+      "type": "procedure",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hunters_den_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "OceanHunter",
+      "type": "tag",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ocean_hunter",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "OceanHunterRare",
+      "type": "tag",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ocean_hunter_rare",
+      "path": "~/LootTags"
+    },
+    {
+      "name": "HuntersDenGui",
+      "type": "gui",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "hunters_den_gui",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "RockyPlot",
+      "type": "block",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rocky_plot",
+      "path": "~/Paths"
+    },
+    {
+      "name": "LeafyPlot",
+      "type": "block",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "leafy_plot",
+      "path": "~/Paths"
+    },
+    {
+      "name": "SeekersTowerUpdateTick",
+      "type": "procedure",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "seekers_tower_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "CTSeekersTower",
+      "type": "recipe",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_seekers_tower",
+      "path": "~/recipes"
+    },
+    {
+      "name": "ParticleSpruce",
+      "type": "particle",
+      "sortid": 201,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "particle_spruce",
+      "path": "~/Sawmill"
+    },
+    {
+      "name": "ParticleStoneAxe",
+      "type": "particle",
+      "sortid": 202,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "particle_stone_axe",
+      "path": "~/Sawmill"
+    },
+    {
+      "name": "ParticleStoneSword",
+      "type": "particle",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "particle_stone_sword",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "ParticleBow",
+      "type": "particle",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "particle_bow",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "ParticleMap",
+      "type": "particle",
+      "sortid": 205,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "particle_map",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "SeekersTowerGUI",
+      "type": "gui",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "seekers_tower_gui",
+      "path": "~/ExplorersGuild"
+    },
+    {
+      "name": "VaultGui",
+      "type": "gui",
+      "sortid": 207,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "vault_gui",
+      "path": "~/vault"
+    },
+    {
+      "name": "Vault",
+      "type": "block",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "vault",
+      "path": "~/vault"
+    },
+    {
+      "name": "VaultUpdateTick",
+      "type": "procedure",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "vault_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/vault"
+    },
+    {
+      "name": "CTVault",
+      "type": "recipe",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_vault",
+      "path": "~/recipes"
     }
   ],
   "variable_elements": [],
@@ -1326,40 +2183,54 @@
   "language_map": {
     "en_us": {
       "block.microcosm.path_t_corner": "Path",
-      "item.microcosm.micro_villager_essence": " µVillager Essence",
       "block.microcosm.ready_field": "Harvestable Field",
       "block.microcosm.path_none_block": "Path",
+      "item.microcosm.lumberjack": "µLumberjack",
+      "block.microcosm.slayers_dormitory": "Slayer\u0027s Dormitory",
+      "block.microcosm.hunters_den": "Hunters Den",
+      "block.microcosm.path_x_corner": "Path X",
+      "block.microcosm.sawmill_block": "Lumber Mill",
+      "item.microcosm.forester": "µForester",
+      "block.microcosm.seekers_tower": "Seekers Tower",
+      "item.microcosm.work_order_base": "Work Order Base",
+      "block.microcosm.midden_block": "Midden Block",
+      "block.microcosm.leafy_plot": "Empty Plot",
+      "item.microcosm.uncut_gem": "Uncut Gem",
+      "block.microcosm.foresters_hut": "Foresters Hut",
+      "item.microcosm.quarryman": "µQuarryman",
+      "block.microcosm.rocky_plot": "Empty Plot",
+      "block.microcosm.path_end_block": "Path End",
+      "item.microcosm.miner": "µMiner",
+      "item.microcosm.trace_elements": "Trace Elements",
+      "item.microcosm.micro_villager_essence": " µVillager Essence",
+      "block.microcosm.nether_p": "Nether Portal",
       "block.microcosm.harvested_field": "Plowed Field",
       "block.microcosm.waterslab": "Waterslab",
-      "block.microcosm.path_x_corner": "Path X",
-      "block.microcosm.sawmill_block": "Sawmill",
+      "item.microcosm.guildmaster": "µGuildmaster",
       "item.microcosm.farmer": "µFarmer",
       "block.microcosm.silo_block": "Silo",
-      "item.microcosm.work_order_base": "Work Order Base",
       "block.microcosm.quarry_block": "Quarry",
       "block.microcosm.grove_cut_block": "Logged Grove",
       "block.microcosm.growing_field_block": "Growing Field",
       "block.microcosm.barn_block": "Barn",
       "block.microcosm.prospectors_hut_block": "Prospector\u0027s Hut",
-      "block.microcosm.midden_block": "Midden Block",
       "block.microcosm.path_straight_block": "Path Straight",
       "block.microcosm.farm_house_block": "Farm House",
       "block.microcosm.path_corner_block": "Path Corner",
       "block.microcosm.bee_hives_block": "Bee Hives",
-      "item.microcosm.uncut_gem": "Uncut Gem",
       "block.microcosm.mine_block": "Mine Shaft",
-      "block.microcosm.foresters_hut": "Foresters Hut",
+      "block.microcosm.conduit_portal": "Conduit Portal",
       "block.microcosm.grindstone_block": "Grindstone",
-      "item.microcosm.quarryman": "µQuarryman",
-      "block.microcosm.path_end_block": "Path End",
-      "item.microcosm.miner": "µMiner",
+      "item.microcosm.recruit": "µRecruit",
+      "block.microcosm.explorers_hall": "Explorers Hall",
+      "block.microcosm.end_p": "End Portal",
       "block.microcosm.kiln_block": "Kiln",
-      "item.microcosm.trace_elements": "Trace Elements",
       "block.microcosm.smeltery": "Smeltery",
       "itemGroup.tabmicrocosm": "Microcosm",
       "block.microcosm.grove_block": "Grove",
       "block.microcosm.plot_block": "Empty Plot",
       "block.microcosm.well_block": "Well",
+      "block.microcosm.vault": "Vault",
       "item.microcosm.smelter": "µSmelter"
     }
   },
@@ -1428,6 +2299,18 @@
       },
       {
         "name": "Mine",
+        "children": []
+      },
+      {
+        "name": "ExplorersGuild",
+        "children": []
+      },
+      {
+        "name": "LootTags",
+        "children": []
+      },
+      {
+        "name": "vault",
         "children": []
       }
     ]

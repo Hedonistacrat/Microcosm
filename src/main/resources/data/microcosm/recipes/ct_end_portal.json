@@ -1,0 +1,42 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:end_stone_bricks"
+    },
+    "1": {
+      "item": "minecraft:end_stone_bricks"
+    },
+    "2": {
+      "item": "minecraft:end_stone_bricks"
+    },
+    "3": {
+      "item": "minecraft:end_stone_bricks"
+    },
+    "4": {
+      "item": "minecraft:ender_eye"
+    },
+    "5": {
+      "item": "minecraft:end_stone_bricks"
+    },
+    "6": {
+      "item": "minecraft:end_stone_bricks"
+    },
+    "7": {
+      "item": "minecraft:end_stone_bricks"
+    },
+    "8": {
+      "item": "minecraft:end_stone_bricks"
+    }
+  },
+  "result": {
+    "item": "microcosm:end_p",
+    "count": 1
+  }
+}

@@ -1,0 +1,207 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 236,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 35,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 276,
+          "y": 125
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Work Order",
+          "onClick": {
+            "name": "DestOrder"
+          },
+          "width": 75,
+          "height": 20,
+          "name": "Work Order",
+          "x": 195,
+          "y": 125
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 1,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #1",
+          "x": 132,
+          "y": 17
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #2",
+          "x": 132,
+          "y": 35
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 3,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #3",
+          "x": 132,
+          "y": 53
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 4,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #4",
+          "x": 132,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Iron: <BNBT:integer:Iron>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Iron: <BNBT:integer:Iron>",
+          "x": 150,
+          "y": 17
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Gold: <BNBT:integer:Gold>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Gold: <BNBT:integer:Gold>",
+          "x": 150,
+          "y": 35
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Lapis: <BNBT:integer:Lapis>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Lapis: <BNBT:integer:Lapis>",
+          "x": 150,
+          "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Vault",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Vault",
+          "x": 204,
+          "y": 8
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Redstone: <BNBT:integer:Redstone>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Redstone: <BNBT:integer:Redstone>",
+          "x": 150,
+          "y": 53
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 5,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #5",
+          "x": 132,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Diamond: <BNBT:integer:Diamond>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Diamond: <BNBT:integer:Diamond>",
+          "x": 150,
+          "y": 89
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 6,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #6",
+          "x": 132,
+          "y": 107
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Emerald: <BNBT:integer:Emerald>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Emerald: <BNBT:integer:Emerald>",
+          "x": 150,
+          "y": 107
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

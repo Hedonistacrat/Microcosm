@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/vault",
+  "textures": {
+    "all": "microcosm:blocks/vault",
+    "particle": "microcosm:blocks/vault",
+    "9": "microcosm:blocks/vault"
+  }
+}

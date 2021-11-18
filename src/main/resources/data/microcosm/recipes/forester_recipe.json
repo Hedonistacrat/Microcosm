@@ -1,0 +1,19 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:leather_boots"
+    },
+    {
+      "tag": "minecraft:saplings"
+    },
+    {
+      "item": "microcosm:micro_villager_essence"
+    }
+  ],
+  "result": {
+    "item": "microcosm:forester",
+    "count": 1
+  }
+}

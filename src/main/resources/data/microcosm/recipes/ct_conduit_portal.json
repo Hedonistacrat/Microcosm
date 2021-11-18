@@ -1,0 +1,42 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345",
+    "678"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:prismarine"
+    },
+    "1": {
+      "item": "minecraft:prismarine"
+    },
+    "2": {
+      "item": "minecraft:prismarine"
+    },
+    "3": {
+      "item": "minecraft:prismarine"
+    },
+    "4": {
+      "item": "minecraft:heart_of_the_sea"
+    },
+    "5": {
+      "item": "minecraft:prismarine"
+    },
+    "6": {
+      "item": "minecraft:prismarine"
+    },
+    "7": {
+      "item": "minecraft:prismarine"
+    },
+    "8": {
+      "item": "minecraft:prismarine"
+    }
+  },
+  "result": {
+    "item": "microcosm:conduit_portal",
+    "count": 1
+  }
+}

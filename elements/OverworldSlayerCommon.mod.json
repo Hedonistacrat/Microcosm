@@ -1,0 +1,29 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Items.ROTTEN_FLESH"
+      },
+      {
+        "value": "Items.BONE"
+      },
+      {
+        "value": "Items.ARROW"
+      },
+      {
+        "value": "Items.STRING"
+      },
+      {
+        "value": "Items.SPIDER_EYE"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "overworld_slayer_common",
+    "namespace": "mod"
+  }
+}

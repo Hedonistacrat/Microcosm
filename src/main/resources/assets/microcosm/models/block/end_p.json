@@ -1,0 +1,9 @@
+{
+  "parent": "microcosm:custom/endp",
+  "textures": {
+    "all": "microcosm:blocks/endp_main",
+    "particle": "microcosm:blocks/endp_main",
+    "1": "microcosm:blocks/endp",
+    "6": "microcosm:blocks/endp_main"
+  }
+}

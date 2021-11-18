@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "7": "seekerstower"
+      },
+      "name": "default"
+    }
+  }
+}

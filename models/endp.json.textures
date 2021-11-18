@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "endp",
+        "6": "endp_main"
+      },
+      "name": "default"
+    }
+  }
+}

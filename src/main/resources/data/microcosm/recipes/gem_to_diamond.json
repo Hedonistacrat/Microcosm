@@ -1,9 +1,0 @@
-{
-  "group": "microcosm",
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "microcosm:uncut_gem"
-  },
-  "result": "minecraft:diamond"
-}

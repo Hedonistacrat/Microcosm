@@ -76,7 +76,7 @@ public class MineshaftGUIGui extends MicrocosmModElements.ModElement {
 			super(containerType, id);
 			this.entity = inv.player;
 			this.world = inv.player.world;
-			this.internal = new ItemStackHandler(29);
+			this.internal = new ItemStackHandler(30);
 			BlockPos pos = null;
 			if (extraData != null) {
 				pos = extraData.readBlockPos();
@@ -284,6 +284,12 @@ public class MineshaftGUIGui extends MicrocosmModElements.ModElement {
 					return (WorkOrderBaseItem.block == stack.getItem());
 				}
 			}));
+			this.customSlots.put(29, this.addSlot(new SlotItemHandler(internal, 29, 194, 87) {
+				@Override
+				public boolean isItemValid(ItemStack stack) {
+					return (WorkOrderBaseItem.block == stack.getItem());
+				}
+			}));
 			int si;
 			int sj;
 			for (si = 0; si < 3; ++si)
@@ -309,18 +315,18 @@ public class MineshaftGUIGui extends MicrocosmModElements.ModElement {
 			if (slot != null && slot.getHasStack()) {
 				ItemStack itemstack1 = slot.getStack();
 				itemstack = itemstack1.copy();
-				if (index < 29) {
-					if (!this.mergeItemStack(itemstack1, 29, this.inventorySlots.size(), true)) {
+				if (index < 30) {
+					if (!this.mergeItemStack(itemstack1, 30, this.inventorySlots.size(), true)) {
 						return ItemStack.EMPTY;
 					}
 					slot.onSlotChange(itemstack1, itemstack);
-				} else if (!this.mergeItemStack(itemstack1, 0, 29, false)) {
-					if (index < 29 + 27) {
-						if (!this.mergeItemStack(itemstack1, 29 + 27, this.inventorySlots.size(), true)) {
+				} else if (!this.mergeItemStack(itemstack1, 0, 30, false)) {
+					if (index < 30 + 27) {
+						if (!this.mergeItemStack(itemstack1, 30 + 27, this.inventorySlots.size(), true)) {
 							return ItemStack.EMPTY;
 						}
 					} else {
-						if (!this.mergeItemStack(itemstack1, 29, 29 + 27, false)) {
+						if (!this.mergeItemStack(itemstack1, 30, 30 + 27, false)) {
 							return ItemStack.EMPTY;
 						}
 					}

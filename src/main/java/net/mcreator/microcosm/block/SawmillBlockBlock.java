@@ -113,7 +113,7 @@ public class SawmillBlockBlock extends MicrocosmModElements.ModElement {
 		public static final DirectionProperty FACING = HorizontalBlock.HORIZONTAL_FACING;
 		public CustomBlock() {
 			super(Block.Properties.create(Material.EARTH).sound(SoundType.GROUND).hardnessAndResistance(1f, 10f).setLightLevel(s -> 0).notSolid()
-					.tickRandomly().setOpaque((bs, br, bp) -> false));
+					.setOpaque((bs, br, bp) -> false));
 			this.setDefaultState(this.stateContainer.getBaseState().with(FACING, Direction.NORTH));
 			setRegistryName("sawmill_block");
 		}
@@ -172,6 +172,15 @@ public class SawmillBlockBlock extends MicrocosmModElements.ModElement {
 		}
 
 		@Override
+		public void onBlockAdded(BlockState blockstate, World world, BlockPos pos, BlockState oldState, boolean moving) {
+			super.onBlockAdded(blockstate, world, pos, oldState, moving);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 20);
+		}
+
+		@Override
 		public void tick(BlockState blockstate, ServerWorld world, BlockPos pos, Random random) {
 			super.tick(blockstate, world, pos, random);
 			int x = pos.getX();
@@ -185,6 +194,7 @@ public class SawmillBlockBlock extends MicrocosmModElements.ModElement {
 				$_dependencies.put("world", world);
 				SawmillBlockUpdateTickProcedure.executeProcedure($_dependencies);
 			}
+			world.getPendingBlockTicks().scheduleTick(new BlockPos(x, y, z), this, 20);
 		}
 
 		@Override
@@ -247,7 +257,7 @@ public class SawmillBlockBlock extends MicrocosmModElements.ModElement {
 				NetworkHooks.openGui((ServerPlayerEntity) entity, new INamedContainerProvider() {
 					@Override
 					public ITextComponent getDisplayName() {
-						return new StringTextComponent("Sawmill");
+						return new StringTextComponent("Lumber Mill");
 					}
 
 					@Override
@@ -311,7 +321,7 @@ public class SawmillBlockBlock extends MicrocosmModElements.ModElement {
 	}
 
 	public static class CustomTileEntity extends LockableLootTileEntity implements ISidedInventory {
-		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(6, ItemStack.EMPTY);
+		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(2, ItemStack.EMPTY);
 		protected CustomTileEntity() {
 			super(tileEntityType);
 		}
@@ -379,7 +389,7 @@ public class SawmillBlockBlock extends MicrocosmModElements.ModElement {
 
 		@Override
 		public ITextComponent getDisplayName() {
-			return new StringTextComponent("Sawmill");
+			return new StringTextComponent("Lumber Mill");
 		}
 
 		@Override

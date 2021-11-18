@@ -1,0 +1,23 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Items.FISHING_ROD"
+      },
+      {
+        "value": "Items.PUFFERFISH_BUCKET"
+      },
+      {
+        "value": "Items.TROPICAL_FISH_BUCKET"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "ocean_hunter_rare",
+    "namespace": "mod"
+  }
+}

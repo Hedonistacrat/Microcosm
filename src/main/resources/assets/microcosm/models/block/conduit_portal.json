@@ -1,0 +1,9 @@
+{
+  "parent": "microcosm:custom/conduitportal",
+  "textures": {
+    "all": "microcosm:blocks/conduitportal",
+    "particle": "microcosm:blocks/conduitportal",
+    "1": "microcosm:blocks/microwater",
+    "7": "microcosm:blocks/conduitportal"
+  }
+}

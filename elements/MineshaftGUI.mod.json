@@ -406,6 +406,43 @@
           "x": 294,
           "y": 71
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gui_tab.png",
+          "use1Xscale": true,
+          "name": "gui_tab.png",
+          "x": 302,
+          "y": 104
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Vault",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Vault",
+          "x": 308,
+          "y": 107
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:WorkOrderBase"
+          },
+          "id": 29,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #29",
+          "x": 315,
+          "y": 117
+        }
       }
     ],
     "gridSettings": {

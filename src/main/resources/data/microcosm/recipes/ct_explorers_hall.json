@@ -1,0 +1,32 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:chest"
+    },
+    "1": {
+      "item": "microcosm:guildmaster"
+    },
+    "2": {
+      "item": "minecraft:writable_book"
+    },
+    "3": {
+      "item": "microcosm:plot_block"
+    },
+    "4": {
+      "item": "microcosm:plot_block"
+    },
+    "5": {
+      "item": "microcosm:plot_block"
+    }
+  },
+  "result": {
+    "item": "microcosm:explorers_hall",
+    "count": 1
+  }
+}

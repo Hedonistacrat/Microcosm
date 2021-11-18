@@ -1,0 +1,41 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Items.FEATHER"
+      },
+      {
+        "value": "Items.CHICKEN"
+      },
+      {
+        "value": "Items.MUTTON"
+      },
+      {
+        "value": "Blocks.WOOL#0"
+      },
+      {
+        "value": "Items.LEATHER"
+      },
+      {
+        "value": "Items.BEEF"
+      },
+      {
+        "value": "Items.PORKCHOP"
+      },
+      {
+        "value": "Items.RABBIT"
+      },
+      {
+        "value": "Items.RABBIT_HIDE"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "overworld_hunter",
+    "namespace": "mod"
+  }
+}

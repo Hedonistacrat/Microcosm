@@ -1,0 +1,23 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:PlotBlock"
+      },
+      {
+        "value": "CUSTOM:RockyPlot"
+      },
+      {
+        "value": "CUSTOM:LeafyPlot"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "micro_plot",
+    "namespace": "forge"
+  }
+}

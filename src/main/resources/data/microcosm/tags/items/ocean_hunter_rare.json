@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:fishing_rod",
+    "minecraft:pufferfish_bucket",
+    "minecraft:tropical_fish_bucket"
+  ]
+}

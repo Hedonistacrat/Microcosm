@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "Items.COMPASS"
+      },
+      {
+        "value": "Blocks.CARTOGRAPHY_TABLE"
+      },
+      {
+        "value": "Items.MAP"
+      },
+      {
+        "value": "Blocks.BOOKSHELF"
+      },
+      {
+        "value": "CUSTOM:Recruit"
+      },
+      {
+        "value": "Blocks.BOOKSHELF"
+      },
+      {
+        "value": "CUSTOM:PlotBlock"
+      },
+      {
+        "value": "CUSTOM:PlotBlock"
+      },
+      {
+        "value": "CUSTOM:PlotBlock"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:SeekersTower"
+    },
+    "name": "ct_seekers_tower",
+    "namespace": "mod"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/huntersden",
+  "textures": {
+    "all": "microcosm:blocks/huntersden",
+    "particle": "microcosm:blocks/huntersden",
+    "9": "microcosm:blocks/huntersden"
+  }
+}

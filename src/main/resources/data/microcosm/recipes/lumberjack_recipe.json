@@ -1,0 +1,16 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:diamond_axe"
+    },
+    {
+      "item": "microcosm:micro_villager_essence"
+    }
+  ],
+  "result": {
+    "item": "microcosm:lumberjack",
+    "count": 1
+  }
+}

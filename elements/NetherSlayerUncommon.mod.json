@@ -1,0 +1,20 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "Items.BLAZE_ROD"
+      },
+      {
+        "value": "Items.MAGMA_CREAM"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "name": "nether_slayer_uncommon",
+    "namespace": "mod"
+  }
+}

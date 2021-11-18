@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "microcosm:block/explorers_hall"
+    },
+    "facing=east": {
+      "model": "microcosm:block/explorers_hall",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "microcosm:block/explorers_hall",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "microcosm:block/explorers_hall",
+      "y": 270
+    }
+  }
+}

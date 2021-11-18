@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "microwater",
+        "7": "conduitportal"
+      },
+      "name": "default"
+    }
+  }
+}

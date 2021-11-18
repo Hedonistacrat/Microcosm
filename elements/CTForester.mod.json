@@ -1,0 +1,46 @@
+{
+  "_fv": 24,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 1,
+    "group": "",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": ""
+      },
+      {
+        "value": "Items.SHEARS"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "Blocks.SAPLING"
+      },
+      {
+        "value": "CUSTOM:Forester"
+      },
+      {
+        "value": "Blocks.SAPLING"
+      },
+      {
+        "value": "CUSTOM:PlotBlock"
+      },
+      {
+        "value": "CUSTOM:PlotBlock"
+      },
+      {
+        "value": "CUSTOM:PlotBlock"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:ForestersHut"
+    },
+    "name": "ct_forester",
+    "namespace": "mod"
+  }
+}

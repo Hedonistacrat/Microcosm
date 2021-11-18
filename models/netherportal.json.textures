@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "micronether",
+        "8": "netherportal"
+      },
+      "name": "default"
+    }
+  }
+}

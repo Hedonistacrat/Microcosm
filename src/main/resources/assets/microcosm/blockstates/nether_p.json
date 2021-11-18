@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "microcosm:block/nether_p"
+    },
+    "facing=east": {
+      "model": "microcosm:block/nether_p",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "microcosm:block/nether_p",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "microcosm:block/nether_p",
+      "y": 270
+    }
+  }
+}

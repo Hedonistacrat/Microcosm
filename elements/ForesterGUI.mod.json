@@ -13,12 +13,12 @@
       {
         "type": "label",
         "data": {
-          "text": "Forester's Hut",
+          "text": "Forester's Hut Level: <BNBT:integer:Level>",
           "color": {
             "value": -12829636,
             "falpha": 0.0
           },
-          "name": "Forester's Hut",
+          "name": "Forester's Hut Level: <BNBT:integer:Level>",
           "x": 132,
           "y": 44
         }
@@ -30,63 +30,21 @@
           "disableStackInteraction": false,
           "dropItemsWhenNotBound": true,
           "name": "Slot #0",
-          "x": 159,
-          "y": 62
+          "x": 132,
+          "y": 80
         }
       },
       {
-        "type": "outputslot",
+        "type": "label",
         "data": {
-          "id": 1,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
-          "name": "Slot #1",
-          "x": 177,
-          "y": 62
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 2,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
-          "name": "Slot #2",
-          "x": 195,
-          "y": 62
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 3,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
-          "name": "Slot #3",
-          "x": 213,
-          "y": 62
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 4,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
-          "name": "Slot #4",
-          "x": 231,
-          "y": 62
-        }
-      },
-      {
-        "type": "outputslot",
-        "data": {
-          "id": 5,
-          "disableStackInteraction": false,
-          "dropItemsWhenNotBound": true,
-          "name": "Slot #5",
-          "x": 249,
-          "y": 62
+          "text": "XP: <BNBT:integer:XP>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "XP: <BNBT:integer:XP>",
+          "x": 132,
+          "y": 53
         }
       }
     ],
@@ -95,7 +53,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

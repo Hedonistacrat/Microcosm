@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/seekerstower",
+  "textures": {
+    "all": "microcosm:blocks/seekerstower",
+    "particle": "microcosm:blocks/seekerstower",
+    "7": "microcosm:blocks/seekerstower"
+  }
+}

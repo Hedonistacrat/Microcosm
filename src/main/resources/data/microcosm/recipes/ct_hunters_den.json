@@ -1,0 +1,32 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "012",
+    "345"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:bow"
+    },
+    "1": {
+      "item": "minecraft:leather_chestplate"
+    },
+    "2": {
+      "item": "minecraft:arrow"
+    },
+    "3": {
+      "item": "microcosm:plot_block"
+    },
+    "4": {
+      "item": "microcosm:plot_block"
+    },
+    "5": {
+      "item": "microcosm:plot_block"
+    }
+  },
+  "result": {
+    "item": "microcosm:hunters_den",
+    "count": 1
+  }
+}

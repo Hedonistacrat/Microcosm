@@ -32,7 +32,7 @@
         "subtract": false
       }
     ],
-    "name": "Sawmill",
+    "name": "Lumber Mill",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -54,10 +54,13 @@
     "material": {
       "value": "EARTH"
     },
-    "tickRate": 10,
-    "tickRandomly": true,
+    "tickRate": 20,
+    "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
       "value": ""
@@ -76,6 +79,21 @@
     "soundOnStep": {
       "value": "GROUND"
     },
+    "breakSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
     "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 1,
@@ -89,7 +107,7 @@
     "hasInventory": true,
     "guiBoundTo": "SawmillGui",
     "openGUIOnRightClick": true,
-    "inventorySize": 6,
+    "inventorySize": 2,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,

@@ -1,0 +1,98 @@
+{
+  "_fv": 24,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Slayer's Dormitory Level: <BNBT:integer:Level>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Slayer's Dormitory Level: <BNBT:integer:Level>",
+          "x": 132,
+          "y": 44
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "XP: <BNBT:integer:XP>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "XP: <BNBT:integer:XP>",
+          "x": 132,
+          "y": 53
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "gui_tab.png",
+          "use1Xscale": true,
+          "name": "gui_tab.png",
+          "x": 298,
+          "y": 38
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Exploring the <BNBT:text:Destination>",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Exploring the <BNBT:text:Destination>",
+          "x": 132,
+          "y": 80
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:WorkOrderBase"
+          },
+          "id": 0,
+          "disableStackInteraction": false,
+          "dropItemsWhenNotBound": true,
+          "name": "Slot #0",
+          "x": 311,
+          "y": 51
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Dest:",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Dest:",
+          "x": 305,
+          "y": 40
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

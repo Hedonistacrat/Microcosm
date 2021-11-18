@@ -1,0 +1,36 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    "678"
+  ],
+  "key": {
+    "1": {
+      "item": "microcosm:recruit"
+    },
+    "3": {
+      "item": "minecraft:iron_sword"
+    },
+    "4": {
+      "item": "minecraft:iron_chestplate"
+    },
+    "5": {
+      "item": "minecraft:shield"
+    },
+    "6": {
+      "item": "microcosm:plot_block"
+    },
+    "7": {
+      "item": "microcosm:plot_block"
+    },
+    "8": {
+      "item": "microcosm:plot_block"
+    }
+  },
+  "result": {
+    "item": "microcosm:slayers_dormitory",
+    "count": 1
+  }
+}

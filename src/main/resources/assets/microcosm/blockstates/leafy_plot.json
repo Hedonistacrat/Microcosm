@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "microcosm:block/leafy_plot"
+    },
+    "facing=east": {
+      "model": "microcosm:block/leafy_plot",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "microcosm:block/leafy_plot",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "microcosm:block/leafy_plot",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "microcosm:block/rocky_plot"
+    },
+    "facing=east": {
+      "model": "microcosm:block/rocky_plot",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "microcosm:block/rocky_plot",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "microcosm:block/rocky_plot",
+      "y": 270
+    }
+  }
+}

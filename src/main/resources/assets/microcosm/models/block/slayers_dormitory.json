@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/slayersdorm",
+  "textures": {
+    "all": "microcosm:blocks/slayersdorm",
+    "particle": "microcosm:blocks/slayersdorm",
+    "8": "microcosm:blocks/slayersdorm"
+  }
+}

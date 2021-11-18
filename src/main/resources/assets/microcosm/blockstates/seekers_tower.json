@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "microcosm:block/seekers_tower"
+    },
+    "facing=east": {
+      "model": "microcosm:block/seekers_tower",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "microcosm:block/seekers_tower",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "microcosm:block/seekers_tower",
+      "y": 270
+    }
+  }
+}

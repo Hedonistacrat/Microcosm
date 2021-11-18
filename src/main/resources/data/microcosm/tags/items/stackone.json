@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:crossbow",
+    "minecraft:totem_of_undying",
+    "minecraft:skeleton_skull",
+    "minecraft:wither_skeleton_skull",
+    "minecraft:zombie_head",
+    "minecraft:creeper_head",
+    "minecraft:dragon_head",
+    "minecraft:trident",
+    "minecraft:tropical_fish_bucket",
+    "minecraft:pufferfish_bucket",
+    "minecraft:fishing_rod"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:skeleton_skull",
+    "minecraft:zombie_head",
+    "minecraft:creeper_head",
+    "minecraft:totem_of_undying"
+  ]
+}

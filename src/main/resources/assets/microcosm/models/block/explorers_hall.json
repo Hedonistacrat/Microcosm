@@ -1,0 +1,8 @@
+{
+  "parent": "microcosm:custom/explorershall",
+  "textures": {
+    "all": "microcosm:blocks/explorershall",
+    "particle": "microcosm:blocks/explorershall",
+    "10": "microcosm:blocks/explorershall"
+  }
+}

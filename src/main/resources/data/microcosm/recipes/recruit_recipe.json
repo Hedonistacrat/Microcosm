@@ -1,0 +1,19 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:gold_nugget"
+    },
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "microcosm:micro_villager_essence"
+    }
+  ],
+  "result": {
+    "item": "microcosm:recruit",
+    "count": 1
+  }
+}

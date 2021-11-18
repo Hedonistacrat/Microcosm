@@ -1,0 +1,36 @@
+{
+  "group": "microcosm",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " 1 ",
+    "345",
+    "678"
+  ],
+  "key": {
+    "1": {
+      "item": "minecraft:shears"
+    },
+    "3": {
+      "tag": "minecraft:saplings"
+    },
+    "4": {
+      "item": "microcosm:forester"
+    },
+    "5": {
+      "tag": "minecraft:saplings"
+    },
+    "6": {
+      "item": "microcosm:plot_block"
+    },
+    "7": {
+      "item": "microcosm:plot_block"
+    },
+    "8": {
+      "item": "microcosm:plot_block"
+    }
+  },
+  "result": {
+    "item": "microcosm:foresters_hut",
+    "count": 1
+  }
+}

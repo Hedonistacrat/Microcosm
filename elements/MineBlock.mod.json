@@ -107,7 +107,7 @@
     "hasInventory": true,
     "guiBoundTo": "MineshaftGUI",
     "openGUIOnRightClick": true,
-    "inventorySize": 29,
+    "inventorySize": 30,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,

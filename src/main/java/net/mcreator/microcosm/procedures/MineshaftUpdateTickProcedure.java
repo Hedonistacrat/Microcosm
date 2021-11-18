@@ -17,6 +17,7 @@ import net.minecraft.block.Blocks;
 import net.minecraft.block.BlockState;
 
 import net.mcreator.microcosm.particle.StonePickaxeParticle;
+import net.mcreator.microcosm.block.VaultBlock;
 import net.mcreator.microcosm.block.SmelteryBlock;
 import net.mcreator.microcosm.MicrocosmMod;
 
@@ -52,6 +53,11 @@ public class MineshaftUpdateTickProcedure {
 		double z = dependencies.get("z") instanceof Integer ? (int) dependencies.get("z") : (double) dependencies.get("z");
 		IWorld world = (IWorld) dependencies.get("world");
 		String WorkOrder = "";
+		ItemStack ChanceBlock = ItemStack.EMPTY;
+		ItemStack Smeltery = ItemStack.EMPTY;
+		ItemStack Vault = ItemStack.EMPTY;
+		boolean SmelteryExists = false;
+		boolean VaultExists = false;
 		double CoalChance = 0;
 		double IronChance = 0;
 		double RedstoneChance = 0;
@@ -79,9 +85,10 @@ public class MineshaftUpdateTickProcedure {
 		double FuelMax = 0;
 		double OreMax = 0;
 		double OreMultiplier = 0;
-		ItemStack ChanceBlock = ItemStack.EMPTY;
-		ItemStack Smeltery = ItemStack.EMPTY;
-		boolean SmelteryExists = false;
+		double VX = 0;
+		double VY = 0;
+		double VZ = 0;
+		double VaultMax = 0;
 		if (world instanceof ServerWorld) {
 			((ServerWorld) world).spawnParticle(StonePickaxeParticle.particle, (x + 0.5), (y + 0.5), (z + 0.5), (int) 1, 0.25, 0.25, 0.25, 0);
 		}
@@ -424,6 +431,7 @@ public class MineshaftUpdateTickProcedure {
 		TotalChance = (double) (CoalChance
 				+ (IronChance + (RedstoneChance + (GoldChance + (LapisChance + (DiamondChance + (EmeraldChance + ObsidianChance)))))));
 		SmelteryExists = (boolean) (false);
+		VaultExists = (boolean) (false);
 		if (((new Object() {
 			public int getAmount(IWorld world, BlockPos pos, int sltid) {
 				AtomicInteger _retval = new AtomicInteger(0);
@@ -448,6 +456,39 @@ public class MineshaftUpdateTickProcedure {
 					return _retval.get();
 				}
 			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (28)));
+		}
+		if (((new Object() {
+			public int getAmount(IWorld world, BlockPos pos, int sltid) {
+				AtomicInteger _retval = new AtomicInteger(0);
+				TileEntity _ent = world.getTileEntity(pos);
+				if (_ent != null) {
+					_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+						_retval.set(capability.getStackInSlot(sltid).getCount());
+					});
+				}
+				return _retval.get();
+			}
+		}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (29))) > 0)) {
+			Vault = (new Object() {
+				public ItemStack getItemStack(BlockPos pos, int sltid) {
+					AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+					TileEntity _ent = world.getTileEntity(pos);
+					if (_ent != null) {
+						_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+							_retval.set(capability.getStackInSlot(sltid).copy());
+						});
+					}
+					return _retval.get();
+				}
+			}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (29)));
+		}
+		if ((((Vault).getOrCreateTag().getBoolean("Vault")) && ((world.getBlockState(new BlockPos((int) ((Vault).getOrCreateTag().getDouble("X")),
+				(int) ((Vault).getOrCreateTag().getDouble("Y")), (int) ((Vault).getOrCreateTag().getDouble("Z")))))
+						.getBlock() == VaultBlock.block))) {
+			VX = (double) ((Vault).getOrCreateTag().getDouble("X"));
+			VY = (double) ((Vault).getOrCreateTag().getDouble("Y"));
+			VZ = (double) ((Vault).getOrCreateTag().getDouble("Z"));
+			VaultExists = (boolean) (true);
 		}
 		if ((((Smeltery).getOrCreateTag().getBoolean("Smeltery"))
 				&& ((world.getBlockState(new BlockPos((int) ((Smeltery).getOrCreateTag().getDouble("X")),
@@ -483,8 +524,20 @@ public class MineshaftUpdateTickProcedure {
 					return -1;
 				}
 			}.getValue(world, new BlockPos((int) SmelterX, (int) SmelterY, (int) SmelterZ), "OreMultiplier"));
+		}
+		if (VaultExists) {
+			VaultMax = (double) (new Object() {
+				public double getValue(IWorld world, BlockPos pos, String tag) {
+					TileEntity tileEntity = world.getTileEntity(pos);
+					if (tileEntity != null)
+						return tileEntity.getTileData().getDouble(tag);
+					return -1;
+				}
+			}.getValue(world, new BlockPos((int) VX, (int) VY, (int) VZ), "VaultMax"));
+		}
+		if ((SmelteryExists || VaultExists)) {
 			for (int index0 = 0; index0 < (int) (27); index0++) {
-				if ((((new Object() {
+				if ((SmelteryExists && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -502,7 +555,7 @@ public class MineshaftUpdateTickProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) SmelterX, (int) SmelterY, (int) SmelterZ), "Fuel")) < FuelMax))) {
+				}.getValue(world, new BlockPos((int) SmelterX, (int) SmelterY, (int) SmelterZ), "Fuel")) < FuelMax)))) {
 					if (!world.isRemote()) {
 						BlockPos _bp = new BlockPos((int) SmelterX, (int) SmelterY, (int) SmelterZ);
 						TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -541,7 +594,7 @@ public class MineshaftUpdateTickProcedure {
 							});
 						}
 					}
-				} else if ((((new Object() {
+				} else if ((SmelteryExists && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -559,7 +612,7 @@ public class MineshaftUpdateTickProcedure {
 							return tileEntity.getTileData().getDouble(tag);
 						return -1;
 					}
-				}.getValue(world, new BlockPos((int) SmelterX, (int) SmelterY, (int) SmelterZ), "Iron Ore")) < OreMax))) {
+				}.getValue(world, new BlockPos((int) SmelterX, (int) SmelterY, (int) SmelterZ), "Iron Ore")) < OreMax)))) {
 					if (!world.isRemote()) {
 						BlockPos _bp = new BlockPos((int) SmelterX, (int) SmelterY, (int) SmelterZ);
 						TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -598,7 +651,7 @@ public class MineshaftUpdateTickProcedure {
 							});
 						}
 					}
-				} else if (((new Object() {
+				} else if ((SmelteryExists && (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 						TileEntity _ent = world.getTileEntity(pos);
@@ -609,7 +662,14 @@ public class MineshaftUpdateTickProcedure {
 						}
 						return _retval.get();
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (InvUpdate))).getItem() == Blocks.GOLD_ORE.asItem())) {
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (InvUpdate))).getItem() == Blocks.GOLD_ORE.asItem()) && ((new Object() {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, new BlockPos((int) SmelterX, (int) SmelterY, (int) SmelterZ), "Gold Ore")) < OreMax)))) {
 					if (!world.isRemote()) {
 						BlockPos _bp = new BlockPos((int) SmelterX, (int) SmelterY, (int) SmelterZ);
 						TileEntity _tileEntity = world.getTileEntity(_bp);
@@ -644,6 +704,286 @@ public class MineshaftUpdateTickProcedure {
 							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
 								if (capability instanceof IItemHandlerModifiable) {
 									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, ItemStack.EMPTY);
+								}
+							});
+						}
+					}
+				} else if ((VaultExists && (((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).copy());
+							});
+						}
+						return _retval.get();
+					}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (InvUpdate))).getItem() == Items.REDSTONE) && (((new Object() {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
+						AtomicInteger _retval = new AtomicInteger(0);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).getCount());
+							});
+						}
+						return _retval.get();
+					}
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (InvUpdate))) >= 9) && ((new Object() {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, new BlockPos((int) VX, (int) VY, (int) VZ), "Redstone")) < VaultMax))))) {
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos((int) VX, (int) VY, (int) VZ);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putDouble("Redstone", ((new Object() {
+								public double getValue(IWorld world, BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(world, new BlockPos((int) VX, (int) VY, (int) VZ), "Redstone")) + 1));
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+					{
+						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+						if (_ent != null) {
+							final int _sltid = (int) (InvUpdate);
+							final ItemStack _setstack = new ItemStack(Items.REDSTONE);
+							_setstack.setCount((int) ((new Object() {
+								public int getAmount(IWorld world, BlockPos pos, int sltid) {
+									AtomicInteger _retval = new AtomicInteger(0);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).getCount());
+										});
+									}
+									return _retval.get();
+								}
+							}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (InvUpdate))) - 9));
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								if (capability instanceof IItemHandlerModifiable) {
+									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+								}
+							});
+						}
+					}
+				} else if ((VaultExists && (((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).copy());
+							});
+						}
+						return _retval.get();
+					}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (InvUpdate))).getItem() == Items.LAPIS_LAZULI) && (((new Object() {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
+						AtomicInteger _retval = new AtomicInteger(0);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).getCount());
+							});
+						}
+						return _retval.get();
+					}
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (InvUpdate))) >= 9) && ((new Object() {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, new BlockPos((int) VX, (int) VY, (int) VZ), "Lapis")) < VaultMax))))) {
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos((int) VX, (int) VY, (int) VZ);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putDouble("Lapis", ((new Object() {
+								public double getValue(IWorld world, BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(world, new BlockPos((int) VX, (int) VY, (int) VZ), "Lapis")) + 1));
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+					{
+						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+						if (_ent != null) {
+							final int _sltid = (int) (InvUpdate);
+							final ItemStack _setstack = new ItemStack(Items.LAPIS_LAZULI);
+							_setstack.setCount((int) ((new Object() {
+								public int getAmount(IWorld world, BlockPos pos, int sltid) {
+									AtomicInteger _retval = new AtomicInteger(0);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).getCount());
+										});
+									}
+									return _retval.get();
+								}
+							}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (InvUpdate))) - 9));
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								if (capability instanceof IItemHandlerModifiable) {
+									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+								}
+							});
+						}
+					}
+				} else if ((VaultExists && (((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).copy());
+							});
+						}
+						return _retval.get();
+					}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (InvUpdate))).getItem() == Items.DIAMOND) && (((new Object() {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
+						AtomicInteger _retval = new AtomicInteger(0);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).getCount());
+							});
+						}
+						return _retval.get();
+					}
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (InvUpdate))) >= 9) && ((new Object() {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, new BlockPos((int) VX, (int) VY, (int) VZ), "Diamond")) < VaultMax))))) {
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos((int) VX, (int) VY, (int) VZ);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putDouble("Diamond", ((new Object() {
+								public double getValue(IWorld world, BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(world, new BlockPos((int) VX, (int) VY, (int) VZ), "Diamond")) + 1));
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+					{
+						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+						if (_ent != null) {
+							final int _sltid = (int) (InvUpdate);
+							final ItemStack _setstack = new ItemStack(Items.DIAMOND);
+							_setstack.setCount((int) ((new Object() {
+								public int getAmount(IWorld world, BlockPos pos, int sltid) {
+									AtomicInteger _retval = new AtomicInteger(0);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).getCount());
+										});
+									}
+									return _retval.get();
+								}
+							}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (InvUpdate))) - 9));
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								if (capability instanceof IItemHandlerModifiable) {
+									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
+								}
+							});
+						}
+					}
+				} else if ((VaultExists && (((new Object() {
+					public ItemStack getItemStack(BlockPos pos, int sltid) {
+						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).copy());
+							});
+						}
+						return _retval.get();
+					}
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (InvUpdate))).getItem() == Items.EMERALD) && (((new Object() {
+					public int getAmount(IWorld world, BlockPos pos, int sltid) {
+						AtomicInteger _retval = new AtomicInteger(0);
+						TileEntity _ent = world.getTileEntity(pos);
+						if (_ent != null) {
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								_retval.set(capability.getStackInSlot(sltid).getCount());
+							});
+						}
+						return _retval.get();
+					}
+				}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (InvUpdate))) >= 9) && ((new Object() {
+					public double getValue(IWorld world, BlockPos pos, String tag) {
+						TileEntity tileEntity = world.getTileEntity(pos);
+						if (tileEntity != null)
+							return tileEntity.getTileData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, new BlockPos((int) VX, (int) VY, (int) VZ), "Emerald")) < VaultMax))))) {
+					if (!world.isRemote()) {
+						BlockPos _bp = new BlockPos((int) VX, (int) VY, (int) VZ);
+						TileEntity _tileEntity = world.getTileEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_tileEntity != null)
+							_tileEntity.getTileData().putDouble("Emerald", ((new Object() {
+								public double getValue(IWorld world, BlockPos pos, String tag) {
+									TileEntity tileEntity = world.getTileEntity(pos);
+									if (tileEntity != null)
+										return tileEntity.getTileData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(world, new BlockPos((int) VX, (int) VY, (int) VZ), "Emerald")) + 1));
+						if (world instanceof World)
+							((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+					}
+					{
+						TileEntity _ent = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+						if (_ent != null) {
+							final int _sltid = (int) (InvUpdate);
+							final ItemStack _setstack = new ItemStack(Items.EMERALD);
+							_setstack.setCount((int) ((new Object() {
+								public int getAmount(IWorld world, BlockPos pos, int sltid) {
+									AtomicInteger _retval = new AtomicInteger(0);
+									TileEntity _ent = world.getTileEntity(pos);
+									if (_ent != null) {
+										_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+											_retval.set(capability.getStackInSlot(sltid).getCount());
+										});
+									}
+									return _retval.get();
+								}
+							}.getAmount(world, new BlockPos((int) x, (int) y, (int) z), (int) (InvUpdate))) - 9));
+							_ent.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null).ifPresent(capability -> {
+								if (capability instanceof IItemHandlerModifiable) {
+									((IItemHandlerModifiable) capability).setStackInSlot(_sltid, _setstack);
 								}
 							});
 						}

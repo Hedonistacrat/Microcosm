@@ -1,0 +1,9 @@
+{
+  "parent": "microcosm:custom/netherportal",
+  "textures": {
+    "all": "microcosm:blocks/netherportal",
+    "particle": "microcosm:blocks/netherportal",
+    "1": "microcosm:blocks/micronether",
+    "8": "microcosm:blocks/netherportal"
+  }
+}

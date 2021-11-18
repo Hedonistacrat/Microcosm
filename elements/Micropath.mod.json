@@ -40,6 +40,18 @@
       },
       {
         "value": "CUSTOM:Smeltery"
+      },
+      {
+        "value": "CUSTOM:ExplorersHall"
+      },
+      {
+        "value": "CUSTOM:ConduitPortal"
+      },
+      {
+        "value": "CUSTOM:NetherP"
+      },
+      {
+        "value": "CUSTOM:EndP"
       }
     ],
     "functions": [],

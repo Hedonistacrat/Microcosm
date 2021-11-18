@@ -12,6 +12,10 @@
     "microcosm:silo_block",
     "microcosm:barn_block",
     "microcosm:mine_block",
-    "microcosm:smeltery"
+    "microcosm:smeltery",
+    "microcosm:explorers_hall",
+    "microcosm:conduit_portal",
+    "microcosm:nether_p",
+    "microcosm:end_p"
   ]
 }

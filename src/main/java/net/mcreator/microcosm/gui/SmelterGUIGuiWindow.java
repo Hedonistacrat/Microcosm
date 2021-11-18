@@ -56,6 +56,8 @@ public class SmelterGUIGuiWindow extends ContainerScreen<SmelterGUIGui.GuiContai
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("microcosm:textures/gui_tab.png"));
+		this.blit(ms, this.guiLeft + 228, this.guiTop + 1, 0, 0, 36, 36, 36, 36);
 		RenderSystem.disableBlend();
 	}
 
@@ -115,6 +117,7 @@ public class SmelterGUIGuiWindow extends ContainerScreen<SmelterGUIGui.GuiContai
 				return 0;
 			}
 		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Fuel")) + "", 7, 26, -12829636);
+		this.font.drawString(ms, "Vault", 235, 4, -12829636);
 	}
 
 	@Override
@@ -127,7 +130,7 @@ public class SmelterGUIGuiWindow extends ContainerScreen<SmelterGUIGui.GuiContai
 	public void init(Minecraft minecraft, int width, int height) {
 		super.init(minecraft, width, height);
 		minecraft.keyboardListener.enableRepeatEvents(true);
-		this.addButton(new Button(this.guiLeft + 124, this.guiTop + 8, 75, 20, new StringTextComponent("Work Order"), e -> {
+		this.addButton(new Button(this.guiLeft + 115, this.guiTop + 107, 75, 20, new StringTextComponent("Work Order"), e -> {
 			if (true) {
 				MicrocosmMod.PACKET_HANDLER.sendToServer(new SmelterGUIGui.ButtonPressedMessage(0, x, y, z));
 				SmelterGUIGui.handleButtonAction(entity, 0, x, y, z);

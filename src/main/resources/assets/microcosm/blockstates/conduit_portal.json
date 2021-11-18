@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "microcosm:block/conduit_portal"
+    },
+    "facing=east": {
+      "model": "microcosm:block/conduit_portal",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "microcosm:block/conduit_portal",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "microcosm:block/conduit_portal",
+      "y": 270
+    }
+  }
+}

@@ -6,7 +6,9 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.World;
 import net.minecraft.util.text.ITextComponent;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.gui.screen.inventory.ContainerScreen;
@@ -50,6 +52,8 @@ public class SawmillGuiGuiWindow extends ContainerScreen<SawmillGuiGui.GuiContai
 		int k = (this.width - this.xSize) / 2;
 		int l = (this.height - this.ySize) / 2;
 		this.blit(ms, k, l, 0, 0, this.xSize, this.ySize, this.xSize, this.ySize);
+		Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("microcosm:textures/gui_tab.png"));
+		this.blit(ms, this.guiLeft + 172, this.guiTop + 1, 0, 0, 36, 36, 36, 36);
 		RenderSystem.disableBlend();
 	}
 
@@ -69,7 +73,31 @@ public class SawmillGuiGuiWindow extends ContainerScreen<SawmillGuiGui.GuiContai
 
 	@Override
 	protected void drawGuiContainerForegroundLayer(MatrixStack ms, int mouseX, int mouseY) {
-		this.font.drawString(ms, "Sawmill", 11, 9, -12829636);
+		this.font.drawString(ms, "Lumber Mill Level: " + ((int) new Object() {
+			public double getValue(BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getDouble(tag);
+				return 0;
+			}
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Level")) + "", 6, 7, -12829636);
+		this.font.drawString(ms, "Target", 174, 4, -12829636);
+		this.font.drawString(ms, "XP: " + ((int) new Object() {
+			public double getValue(BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getDouble(tag);
+				return 0;
+			}
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "XP")) + "", 6, 16, -12829636);
+		this.font.drawString(ms, "Logs: " + ((int) new Object() {
+			public double getValue(BlockPos pos, String tag) {
+				TileEntity tileEntity = world.getTileEntity(pos);
+				if (tileEntity != null)
+					return tileEntity.getTileData().getDouble(tag);
+				return 0;
+			}
+		}.getValue(new BlockPos((int) x, (int) y, (int) z), "Logs")) + "", 24, 52, -12829636);
 	}
 
 	@Override

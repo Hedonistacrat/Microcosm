@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:rotten_flesh",
+    "minecraft:bone",
+    "minecraft:arrow",
+    "minecraft:string",
+    "minecraft:spider_eye"
+  ]
+}
