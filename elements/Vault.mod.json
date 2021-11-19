@@ -124,6 +124,15 @@
     "onTickUpdate": {
       "name": "VaultUpdateTick"
     },
+    "onDestroyedByPlayer": {
+      "name": "PathForceUpdateAdjacentProc"
+    },
+    "onDestroyedByExplosion": {
+      "name": "PathForceUpdateAdjacentProc"
+    },
+    "onBlockPlayedBy": {
+      "name": "PathForceUpdateAdjacentProc"
+    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

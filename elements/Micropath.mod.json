@@ -52,6 +52,9 @@
       },
       {
         "value": "CUSTOM:EndP"
+      },
+      {
+        "value": "CUSTOM:Vault"
       }
     ],
     "functions": [],

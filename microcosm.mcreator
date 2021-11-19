@@ -2176,6 +2176,36 @@
       "ids": {},
       "registry_name": "ct_vault",
       "path": "~/recipes"
+    },
+    {
+      "name": "FieldUpdateTick",
+      "type": "procedure",
+      "sortid": 211,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "field_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Field"
     }
   ],
   "variable_elements": [],
