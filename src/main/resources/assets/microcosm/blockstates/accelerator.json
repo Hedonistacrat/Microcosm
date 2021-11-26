@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "microcosm:block/accelerator"
+    },
+    "facing=east": {
+      "model": "microcosm:block/accelerator",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "microcosm:block/accelerator",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "microcosm:block/accelerator",
+      "y": 270
+    }
+  }
+}

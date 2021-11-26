@@ -334,6 +334,15 @@ public class SeekersTowerUpdateTickProcedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			if (!world.isRemote()) {
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				TileEntity _tileEntity = world.getTileEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_tileEntity != null)
+					_tileEntity.getTileData().putDouble("XP", 9001);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			}
 		}
 		roll = (double) (((new Random()).nextInt((int) 1111 + 1)) + (new Object() {
 			public double getValue(IWorld world, BlockPos pos, String tag) {
@@ -345,7 +354,7 @@ public class SeekersTowerUpdateTickProcedure {
 		}.getValue(world, new BlockPos((int) x, (int) y, (int) z), "Level")));
 		Loot = new ItemStack(Blocks.AIR);
 		if ((roll > 1100)) {
-			CurioRoll = (double) ((new Random()).nextInt((int) 6 + 1));
+			CurioRoll = (double) ((new Random()).nextInt((int) 9 + 1));
 			if ((CurioRoll == 0)) {
 				Loot = new ItemStack((new Object() {
 					public Item getRandomItem(String _tagName) {
@@ -387,7 +396,28 @@ public class SeekersTowerUpdateTickProcedure {
 						ITag<Item> _tag = ItemTags.getCollection().getTagByID(new ResourceLocation(_tagName));
 						return _tag.getAllElements().isEmpty() ? Items.AIR : _tag.getRandomElement(new Random());
 					}
-				}.getRandomItem(("curios:hand").toLowerCase(java.util.Locale.ENGLISH))));
+				}.getRandomItem(("curios:hands").toLowerCase(java.util.Locale.ENGLISH))));
+			} else if ((CurioRoll == 6)) {
+				Loot = new ItemStack((new Object() {
+					public Item getRandomItem(String _tagName) {
+						ITag<Item> _tag = ItemTags.getCollection().getTagByID(new ResourceLocation(_tagName));
+						return _tag.getAllElements().isEmpty() ? Items.AIR : _tag.getRandomElement(new Random());
+					}
+				}.getRandomItem(("curios:ring").toLowerCase(java.util.Locale.ENGLISH))));
+			} else if ((CurioRoll == 7)) {
+				Loot = new ItemStack((new Object() {
+					public Item getRandomItem(String _tagName) {
+						ITag<Item> _tag = ItemTags.getCollection().getTagByID(new ResourceLocation(_tagName));
+						return _tag.getAllElements().isEmpty() ? Items.AIR : _tag.getRandomElement(new Random());
+					}
+				}.getRandomItem(("curios:belt").toLowerCase(java.util.Locale.ENGLISH))));
+			} else if ((CurioRoll == 8)) {
+				Loot = new ItemStack((new Object() {
+					public Item getRandomItem(String _tagName) {
+						ITag<Item> _tag = ItemTags.getCollection().getTagByID(new ResourceLocation(_tagName));
+						return _tag.getAllElements().isEmpty() ? Items.AIR : _tag.getRandomElement(new Random());
+					}
+				}.getRandomItem(("curios:trinkets").toLowerCase(java.util.Locale.ENGLISH))));
 			} else {
 				Loot = new ItemStack((new Object() {
 					public Item getRandomItem(String _tagName) {
@@ -473,11 +503,11 @@ public class SeekersTowerUpdateTickProcedure {
 			}
 			if (world instanceof World && !world.isRemote()) {
 				((World) world).playSound(null, new BlockPos((int) x, (int) y, (int) z),
-						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.chest.open")),
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.villager.celebrate")),
 						SoundCategory.NEUTRAL, (float) 0.25, (float) 1);
 			} else {
 				((World) world).playSound(x, y, z,
-						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.chest.open")),
+						(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.villager.celebrate")),
 						SoundCategory.NEUTRAL, (float) 0.25, (float) 1, false);
 			}
 		}

@@ -10,37 +10,37 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": ""
+        "value": "Items.GOLD_INGOT"
       },
       {
-        "value": "CUSTOM:Recruit"
+        "value": "Items.CLOCK"
       },
       {
-        "value": ""
+        "value": "Items.GOLD_INGOT"
       },
       {
-        "value": "Items.BOW"
+        "value": "Items.GOLD_INGOT"
       },
       {
-        "value": "Items.LEATHER_CHESTPLATE"
+        "value": "CUSTOM:MicroVillagerEssence"
       },
       {
-        "value": "Items.ARROW"
+        "value": "Items.GOLD_INGOT"
       },
       {
-        "value": "CUSTOM:PlotBlock"
+        "value": "Items.GOLD_INGOT"
       },
       {
-        "value": "CUSTOM:PlotBlock"
+        "value": "Items.GOLD_INGOT"
       },
       {
-        "value": "CUSTOM:PlotBlock"
+        "value": "Items.GOLD_INGOT"
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:HuntersDen"
+      "value": "CUSTOM:Accelerator"
     },
-    "name": "ct_hunters_den",
+    "name": "ct_accelerator",
     "namespace": "mod"
   }
 }

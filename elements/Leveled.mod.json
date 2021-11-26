@@ -1,0 +1,41 @@
+{
+  "_fv": 24,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:QuarryBlock"
+      },
+      {
+        "value": "CUSTOM:SawmillBlock"
+      },
+      {
+        "value": "CUSTOM:FarmHouseBlock"
+      },
+      {
+        "value": "CUSTOM:ForestersHut"
+      },
+      {
+        "value": "CUSTOM:MineBlock"
+      },
+      {
+        "value": "CUSTOM:Smeltery"
+      },
+      {
+        "value": "CUSTOM:SlayersDormitory"
+      },
+      {
+        "value": "CUSTOM:HuntersDen"
+      },
+      {
+        "value": "CUSTOM:SeekersTower"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "name": "leveled",
+    "namespace": "mod"
+  }
+}

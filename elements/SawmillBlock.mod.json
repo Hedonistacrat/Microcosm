@@ -114,7 +114,9 @@
     "inventoryOutSlotIDs": [
       0
     ],
-    "inventoryInSlotIDs": [],
+    "inventoryInSlotIDs": [
+      1
+    ],
     "hasEnergyStorage": false,
     "energyInitial": 0,
     "energyCapacity": 400000,

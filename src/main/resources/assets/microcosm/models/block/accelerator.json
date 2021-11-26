@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "microcosm:blocks/dev_texture_supreme",
+    "up": "microcosm:blocks/dev_texture_supreme",
+    "north": "microcosm:blocks/dev_texture_supreme",
+    "east": "microcosm:blocks/dev_texture_supreme",
+    "south": "microcosm:blocks/dev_texture_supreme",
+    "west": "microcosm:blocks/dev_texture_supreme",
+    "particle": "microcosm:blocks/dev_texture_supreme"
+  }
+}

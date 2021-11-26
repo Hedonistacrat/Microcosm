@@ -166,6 +166,15 @@ public class SawmillBlockUpdateTickProcedure {
 				if (world instanceof World)
 					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
+			if (!world.isRemote()) {
+				BlockPos _bp = new BlockPos((int) x, (int) y, (int) z);
+				TileEntity _tileEntity = world.getTileEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_tileEntity != null)
+					_tileEntity.getTileData().putDouble("XP", 9001);
+				if (world instanceof World)
+					((World) world).notifyBlockUpdate(_bp, _bs, _bs, 3);
+			}
 		}
 		LogType = new ItemStack(Blocks.OAK_LOG);
 		if ((ItemTags.getCollection().getTagByID(new ResourceLocation(("minecraft:logs").toLowerCase(java.util.Locale.ENGLISH)))

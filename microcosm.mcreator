@@ -2206,9 +2206,178 @@
         ]
       },
       "path": "~/Field"
+    },
+    {
+      "name": "BucketOfThanks",
+      "type": "item",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bucket_of_thanks",
+      "path": "~/Misc"
+    },
+    {
+      "name": "BucketOfThanksRightClickedOnBlock",
+      "type": "procedure",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "bucket_of_thanks_right_clicked_on_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "Leveled",
+      "type": "tag",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "leveled",
+      "path": "~/tags"
+    },
+    {
+      "name": "BenefactorsBonus",
+      "type": "procedure",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "benefactors_bonus",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Misc"
+    },
+    {
+      "name": "MiddenGui",
+      "type": "gui",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "midden_gui",
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "MiddenBlockUpdateTick",
+      "type": "procedure",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "midden_block_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/farmhouse"
+    },
+    {
+      "name": "Accelerator",
+      "type": "block",
+      "sortid": 218,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "accelerator",
+      "path": "~/Accelerator"
+    },
+    {
+      "name": "AcceleratorUpdateTick",
+      "type": "procedure",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "accelerator_update_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Accelerator"
+    },
+    {
+      "name": "CTAccelerator",
+      "type": "recipe",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ct_accelerator",
+      "path": "~/recipes"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "MicrocosmSupporter",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
@@ -2227,6 +2396,7 @@
       "block.microcosm.leafy_plot": "Empty Plot",
       "item.microcosm.uncut_gem": "Uncut Gem",
       "block.microcosm.foresters_hut": "Foresters Hut",
+      "item.microcosm.bucket_of_thanks": "Bucket Of Thanks",
       "item.microcosm.quarryman": "µQuarryman",
       "block.microcosm.rocky_plot": "Empty Plot",
       "block.microcosm.path_end_block": "Path End",
@@ -2238,6 +2408,7 @@
       "block.microcosm.waterslab": "Waterslab",
       "item.microcosm.guildmaster": "µGuildmaster",
       "item.microcosm.farmer": "µFarmer",
+      "block.microcosm.accelerator": "Accelerator",
       "block.microcosm.silo_block": "Silo",
       "block.microcosm.quarry_block": "Quarry",
       "block.microcosm.grove_cut_block": "Logged Grove",
@@ -2341,6 +2512,10 @@
       },
       {
         "name": "vault",
+        "children": []
+      },
+      {
+        "name": "Accelerator",
         "children": []
       }
     ]

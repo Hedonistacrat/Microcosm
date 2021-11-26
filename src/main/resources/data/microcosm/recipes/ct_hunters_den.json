@@ -2,26 +2,30 @@
   "group": "microcosm",
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "012",
-    "345"
+    " 1 ",
+    "345",
+    "678"
   ],
   "key": {
-    "0": {
-      "item": "minecraft:bow"
-    },
     "1": {
-      "item": "minecraft:leather_chestplate"
-    },
-    "2": {
-      "item": "minecraft:arrow"
+      "item": "microcosm:recruit"
     },
     "3": {
-      "item": "microcosm:plot_block"
+      "item": "minecraft:bow"
     },
     "4": {
-      "item": "microcosm:plot_block"
+      "item": "minecraft:leather_chestplate"
     },
     "5": {
+      "item": "minecraft:arrow"
+    },
+    "6": {
+      "item": "microcosm:plot_block"
+    },
+    "7": {
+      "item": "microcosm:plot_block"
+    },
+    "8": {
       "item": "microcosm:plot_block"
     }
   },

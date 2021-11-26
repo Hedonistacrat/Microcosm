@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "microcosm:quarry_block",
+    "microcosm:sawmill_block",
+    "microcosm:farm_house_block",
+    "microcosm:foresters_hut",
+    "microcosm:mine_block",
+    "microcosm:smeltery",
+    "microcosm:slayers_dormitory",
+    "microcosm:hunters_den",
+    "microcosm:seekers_tower"
+  ]
+}
